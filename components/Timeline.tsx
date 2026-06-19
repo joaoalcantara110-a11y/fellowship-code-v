@@ -1,0 +1,154 @@
+"use client";
+
+import { useEffect, useRef } from "react";
+
+const steps = [
+  {
+    number: "01",
+    title: "Ensino Directo",
+    desc: "Princípios de liderança, fé, propósito e desenvolvimento humano ministrados diretamente pelo Dr. Venceslau Andrade.",
+    icon: (
+      <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+      </svg>
+    ),
+  },
+  {
+    number: "02",
+    title: "Perguntas e Respostas",
+    desc: "Interação direta com os mentores. Um espaço de clareza, orientação e diálogo aberto com quem já percorreu o caminho.",
+    icon: (
+      <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+      </svg>
+    ),
+  },
+  {
+    number: "03",
+    title: "Partilha Comunitária",
+    desc: "Vitórias, desafios e crescimento conjunto. Um ambiente de responsabilidade mútua onde cada história inspira a próxima.",
+    icon: (
+      <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+      </svg>
+    ),
+  },
+  {
+    number: "04",
+    title: "Alinhamento Prático",
+    desc: "Aplicação dos princípios à vida real: família, liderança, negócios e propósito. Do ensino à ação concreta.",
+    icon: (
+      <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+  },
+];
+
+export default function Timeline() {
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("opacity-100", "translate-y-0");
+            entry.target.classList.remove("opacity-0", "translate-y-8");
+          }
+        });
+      },
+      { threshold: 0.05 }
+    );
+    const elements = sectionRef.current?.querySelectorAll(".anim");
+    elements?.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <section
+      id="sessoes"
+      ref={sectionRef}
+      className="relative py-16 sm:py-24 md:py-32 bg-[#0a1a38] overflow-hidden"
+    >
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#F7931E]/20 to-transparent" />
+      <div className="hidden sm:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] md:w-[600px] h-[400px] md:h-[600px] bg-[#F7931E]/3 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="anim opacity-0 translate-y-8 transition-all duration-700 text-center mb-10 sm:mb-20">
+          <span className="inline-block px-3 sm:px-4 py-1.5 rounded-full bg-[#F7931E]/10 border border-[#F7931E]/30 text-[#F7931E] text-xs sm:text-sm font-medium tracking-wide uppercase mb-4">
+            Cada Sessão
+          </span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
+            O que acontece em{" "}
+            <span className="text-gradient-gold">cada encontro.</span>
+          </h2>
+          <p className="text-white/60 text-base sm:text-lg max-w-xl mx-auto">
+            Cada sessão é cuidadosamente estruturada para maximizar o crescimento e o impacto na sua vida.
+          </p>
+        </div>
+
+        {/* Mobile: vertical stack with left line | Desktop: alternating */}
+        <div className="relative">
+          {/* Vertical line — desktop only */}
+          <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-[#F7931E]/50 via-[#F7931E]/20 to-transparent hidden lg:block" />
+
+          {/* Mobile vertical line */}
+          <div className="absolute left-5 top-0 bottom-0 w-px bg-gradient-to-b from-[#F7931E]/40 via-[#F7931E]/20 to-transparent lg:hidden" />
+
+          <div className="space-y-6 sm:space-y-8 lg:space-y-0">
+            {steps.map((step, i) => (
+              <div
+                key={step.number}
+                className={`anim opacity-0 translate-y-8 transition-all duration-700 
+                  /* Mobile: left-aligned with icon on left */
+                  flex gap-4 pl-0
+                  /* Desktop: alternating */
+                  lg:flex lg:items-center lg:gap-12 lg:pl-0 ${
+                  i % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
+                }`}
+                style={{ transitionDelay: `${i * 100}ms` }}
+              >
+                {/* Mobile layout wrapper */}
+                <div className="flex gap-4 w-full lg:contents">
+                  {/* Mobile dot + number */}
+                  <div className="flex flex-col items-center lg:hidden flex-shrink-0">
+                    <div className="w-10 h-10 rounded-xl bg-[#F7931E]/20 flex items-center justify-center text-[#F7931E] z-10 relative">
+                      {step.icon}
+                    </div>
+                  </div>
+
+                  {/* Content card */}
+                  <div className={`flex-1 lg:w-5/12 ${i % 2 === 0 ? "lg:text-right" : "lg:text-left"} mb-0 lg:mb-16`}>
+                    <div className="glass rounded-2xl p-5 sm:p-6 lg:p-8 border border-white/10 hover:border-[#F7931E]/30 transition-all duration-300">
+                      {/* Desktop icon row */}
+                      <div className={`hidden lg:flex items-center gap-3 mb-4 ${i % 2 === 0 ? "lg:justify-end" : "lg:justify-start"}`}>
+                        <div className="w-10 h-10 rounded-xl bg-[#F7931E]/20 flex items-center justify-center text-[#F7931E]">
+                          {step.icon}
+                        </div>
+                        <span className="text-[#F7931E] font-bold text-sm tracking-widest">{step.number}</span>
+                      </div>
+                      {/* Mobile number badge */}
+                      <span className="lg:hidden text-[#F7931E] font-bold text-xs tracking-widest mb-2 block">{step.number}</span>
+                      <h3 className="text-white text-lg sm:text-xl font-bold mb-2 sm:mb-3">{step.title}</h3>
+                      <p className="text-white/60 text-sm sm:text-base leading-relaxed">{step.desc}</p>
+                    </div>
+                  </div>
+
+                  {/* Desktop center dot */}
+                  <div className="hidden lg:flex lg:w-2/12 justify-center">
+                    <div className="w-5 h-5 rounded-full bg-[#F7931E] border-4 border-[#0a1a38] shadow-lg shadow-[#F7931E]/30 relative z-10" />
+                  </div>
+
+                  {/* Desktop spacer */}
+                  <div className="hidden lg:block lg:w-5/12" />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
