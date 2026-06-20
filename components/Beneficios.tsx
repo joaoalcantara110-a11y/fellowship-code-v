@@ -66,7 +66,7 @@ export default function Beneficios() {
               className="anim opacity-0 translate-y-8 transition-all duration-700"
               style={{ transitionDelay: `${i * 50}ms` }}
             >
-              <div className="group h-full p-4 sm:p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-[#F7931E]/40 hover:bg-gradient-to-br hover:from-[#F7931E]/10 hover:to-transparent transition-all duration-300">
+              <div className="group h-full p-3 sm:p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-[#F7931E]/40 hover:bg-gradient-to-br hover:from-[#F7931E]/10 hover:to-transparent transition-all duration-300">
                 <div className="flex items-start gap-3">
                   <div className="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-[#F7931E] flex items-center justify-center">
                     <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">

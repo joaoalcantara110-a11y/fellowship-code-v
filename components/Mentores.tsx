@@ -34,7 +34,7 @@ export default function Mentores() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="anim opacity-0 translate-y-8 transition-all duration-700 text-center mb-10 sm:mb-20">
+        <div className="anim opacity-0 translate-y-8 transition-all duration-700 text-center mb-6 sm:mb-20">
           <span className="inline-block px-3 sm:px-4 py-1.5 rounded-full bg-[#F7931E]/10 border border-[#F7931E]/30 text-[#F7931E] text-xs sm:text-sm font-medium tracking-wide uppercase mb-4">
             Os Mentores
           </span>
@@ -45,7 +45,7 @@ export default function Mentores() {
         </div>
 
         {/* Dr. Venceslau */}
-        <div className="anim opacity-0 translate-y-8 transition-all duration-700 delay-100 mb-12 sm:mb-20">
+        <div className="anim opacity-0 translate-y-8 transition-all duration-700 delay-100 mb-8 sm:mb-20">
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
             {/* Images — simplified for mobile */}
             <div className="relative pb-6 sm:pb-8">
@@ -123,12 +123,12 @@ export default function Mentores() {
                   A sua missão é formar líderes que sejam uma resposta para esta geração.
                 </p>
               </div>
-              {/* Tags */}
+              {/* Tags — max 3 visible on mobile */}
               <div className="flex flex-wrap gap-2">
-                {["Liderança", "Propósito", "Empreendedorismo", "Fé", "Desenvolvimento Humano"].map((tag) => (
+                {["Liderança", "Propósito", "Empreendedorismo", "Fé", "Desenvolvimento Humano"].map((tag, i) => (
                   <span
                     key={tag}
-                    className="px-2.5 sm:px-3 py-1 rounded-full bg-[#F7931E]/10 border border-[#F7931E]/20 text-[#F7931E] text-xs font-medium"
+                    className={`px-2.5 sm:px-3 py-1 rounded-full bg-[#F7931E]/10 border border-[#F7931E]/20 text-[#F7931E] text-xs font-medium ${i >= 3 ? "hidden sm:inline-block" : ""}`}
                   >
                     {tag}
                   </span>
@@ -139,7 +139,7 @@ export default function Mentores() {
         </div>
 
         {/* Divider */}
-        <div className="divider-gold my-10 sm:my-16" />
+        <div className="divider-gold my-8 sm:my-16" />
 
         {/* Prof. Vaumara */}
         <div className="anim opacity-0 translate-y-8 transition-all duration-700 delay-200">
@@ -168,12 +168,12 @@ export default function Mentores() {
                   processo de crescimento de cada participante.
                 </p>
               </div>
-              {/* Tags */}
+              {/* Tags — max 3 visible on mobile */}
               <div className="flex flex-wrap gap-2">
-                {["Desenvolvimento Humano", "Identidade", "Educação", "Mentoria", "Liderança"].map((tag) => (
+                {["Desenvolvimento Humano", "Identidade", "Educação", "Mentoria", "Liderança"].map((tag, i) => (
                   <span
                     key={tag}
-                    className="px-2.5 sm:px-3 py-1 rounded-full bg-[#F7931E]/10 border border-[#F7931E]/20 text-[#F7931E] text-xs font-medium"
+                    className={`px-2.5 sm:px-3 py-1 rounded-full bg-[#F7931E]/10 border border-[#F7931E]/20 text-[#F7931E] text-xs font-medium ${i >= 3 ? "hidden sm:inline-block" : ""}`}
                   >
                     {tag}
                   </span>

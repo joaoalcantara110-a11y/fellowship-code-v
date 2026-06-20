@@ -9,8 +9,9 @@ export default function Footer() {
     <footer className="relative bg-[#040c1e] border-t border-white/5 overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#F7931E]/20 to-transparent" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12 items-start">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-12 items-start">
+
           {/* Logo & Description */}
           <div className="md:col-span-2">
             <Image
@@ -18,13 +19,13 @@ export default function Footer() {
               alt="Fellowship Global"
               width={200}
               height={70}
-              className="h-10 sm:h-12 w-auto object-contain mb-4 sm:mb-6"
+              className="h-8 sm:h-12 w-auto object-contain mb-3 sm:mb-6"
             />
-            <p className="text-white/50 text-sm sm:text-base leading-relaxed max-w-md mb-4 sm:mb-6">
-              Uma comunidade para quem acredita que crescimento, propósito e comunhão caminham
-              juntos.
+            <p className="text-white/50 text-xs sm:text-base leading-relaxed max-w-xs sm:max-w-md mb-3 sm:mb-6">
+              Uma comunidade para quem acredita que crescimento, propósito e comunhão caminham juntos.
             </p>
-            <div className="flex flex-wrap gap-2 sm:gap-3">
+            {/* Tags — hidden on mobile for a cleaner footer */}
+            <div className="hidden sm:flex flex-wrap gap-2 sm:gap-3">
               {["Comunhão", "Crescimento", "Alinhamento", "Propósito", "Liderança"].map((tag) => (
                 <span
                   key={tag}
@@ -38,7 +39,7 @@ export default function Footer() {
 
           {/* CTA */}
           <div className="flex flex-col gap-3 sm:gap-4">
-            <p className="text-white/70 font-medium text-sm sm:text-base">Faça parte da comunidade</p>
+            <p className="text-white/70 font-medium text-sm">Faça parte da comunidade</p>
             <a
               href={WHATSAPP_LINK}
               target="_blank"
@@ -50,13 +51,13 @@ export default function Footer() {
               </svg>
               Reservar o meu lugar
             </a>
-            <div className="flex gap-4 sm:gap-6 mt-1 sm:mt-2">
+            <div className="flex gap-4 sm:gap-6">
               {[
                 { label: "Quintas-Feiras", sub: "Semanalmente" },
                 { label: "Acesso Global", sub: "Transmissão Privada" },
               ].map((item) => (
-                <div key={item.label} className="text-center">
-                  <p className="text-[#F7931E] font-bold text-xs sm:text-sm">{item.label}</p>
+                <div key={item.label}>
+                  <p className="text-[#F7931E] font-bold text-xs">{item.label}</p>
                   <p className="text-white/40 text-xs">{item.sub}</p>
                 </div>
               ))}
@@ -65,8 +66,8 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-4 text-center sm:text-left">
-          <p className="text-white/30 text-xs sm:text-sm">
+        <div className="mt-6 sm:mt-12 pt-4 sm:pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-1 sm:gap-4 text-center">
+          <p className="text-white/30 text-xs">
             © {new Date().getFullYear()} Fellowship Global · CODE V Leadership School
           </p>
           <p className="text-white/20 text-xs">
