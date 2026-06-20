@@ -50,12 +50,12 @@ export default function Mentores() {
             {/* Images — simplified for mobile */}
             <div className="relative pb-6 sm:pb-8">
               {/* Mobile: single featured image */}
-              <div className="block sm:hidden relative rounded-2xl overflow-hidden aspect-[4/3]">
+              <div className="block sm:hidden relative rounded-2xl overflow-hidden aspect-[3/4]">
                 <Image
                   src="/images/mentor3.webp"
                   alt="Dr. Venceslau Andrade"
                   fill
-                  className="object-cover object-center"
+                  className="object-cover object-top"
                   sizes="100vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#060f22]/50 to-transparent" />
@@ -115,7 +115,7 @@ export default function Mentores() {
                   diferentes países, ajudando pessoas a alinhar propósito, liderança, identidade e
                   resultados.
                 </p>
-                <p>
+                <p className="hidden sm:block">
                   A sua abordagem única combina princípios espirituais sólidos com estratégias
                   práticas de desenvolvimento humano, criando um ambiente de transformação genuína.
                 </p>
@@ -159,7 +159,7 @@ export default function Mentores() {
                   Dedica-se ao desenvolvimento humano, fortalecimento da identidade, crescimento
                   emocional e formação de pessoas com propósito.
                 </p>
-                <p>
+                <p className="hidden sm:block">
                   Através do ensino, mentoria e liderança, tem impactado vidas e ajudado pessoas a
                   descobrirem o seu valor, potencial e propósito em diferentes contextos e culturas.
                 </p>
@@ -184,7 +184,7 @@ export default function Mentores() {
             {/* Images — order-1 on mobile */}
             <div className="relative pb-6 sm:pb-8 order-1 lg:order-2">
               {/* Mobile: single featured image */}
-              <div className="block sm:hidden relative rounded-2xl overflow-hidden aspect-[4/3]">
+              <div className="block sm:hidden relative rounded-2xl overflow-hidden aspect-[3/4]">
                 <Image
                   src="/images/mentor4.webp"
                   alt="Prof. Vaumara Andrade"

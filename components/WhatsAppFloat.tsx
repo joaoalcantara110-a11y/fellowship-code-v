@@ -9,7 +9,7 @@ export default function WhatsAppFloat() {
         href={WHATSAPP_LINK}
         target="_blank"
         rel="noopener noreferrer"
-        className="group flex items-center gap-3 px-4 py-3 rounded-full bg-[#25D366] text-white font-semibold shadow-2xl hover:shadow-[#25D366]/40 hover:scale-105 transition-all duration-300"
+        className="group flex items-center justify-center w-14 h-14 sm:w-auto sm:h-auto sm:gap-3 sm:px-4 sm:py-3 rounded-full bg-[#25D366] text-white font-semibold shadow-2xl hover:shadow-[#25D366]/40 hover:scale-105 transition-all duration-300"
         aria-label="Entrar no grupo WhatsApp"
       >
         <svg className="w-6 h-6 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">

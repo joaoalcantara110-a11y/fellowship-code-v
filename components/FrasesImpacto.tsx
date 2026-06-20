@@ -71,7 +71,7 @@ export default function FrasesImpacto() {
           </div>
         </div>
 
-        {/* Featured quotes — 1 col mobile, 2 tablet, 3 desktop */}
+        {/* Featured quotes — 1 col mobile (first 3 only), 2 tablet, 3 desktop */}
         <div className="anim opacity-0 translate-y-8 transition-all duration-700 delay-200 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {frases.map((frase, i) => (
             <div
@@ -80,7 +80,7 @@ export default function FrasesImpacto() {
                 i === 0
                   ? "bg-gradient-to-br from-[#F7931E]/15 to-[#F7931E]/5 border-[#F7931E]/30"
                   : "bg-white/5 border-white/10 hover:border-[#F7931E]/30 hover:bg-[#F7931E]/5"
-              }`}
+              } ${i >= 3 ? "hidden sm:block" : ""}`}
               style={{ transitionDelay: `${i * 60}ms` }}
             >
               <div className="text-[#F7931E]/30 text-4xl sm:text-5xl font-serif leading-none mb-3 sm:mb-4 select-none">"</div>

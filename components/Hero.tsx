@@ -68,8 +68,8 @@ export default function Hero() {
             </span>
           </div>
 
-          {/* Logo */}
-          <div className="animate-on-enter opacity-0 translate-y-8 transition-all duration-700 delay-150 mb-5 sm:mb-6">
+          {/* Logo — hidden on mobile (Navbar already shows it) */}
+          <div className="hidden sm:block animate-on-enter opacity-0 translate-y-8 transition-all duration-700 delay-150 mb-5 sm:mb-6">
             <Image
               src="/images/logo1.png"
               alt="Fellowship Global"
@@ -96,12 +96,10 @@ export default function Hero() {
 
           {/* Description */}
           <p
-            className="animate-on-enter opacity-0 translate-y-8 transition-all duration-700 delay-400 text-white/80 text-base sm:text-lg md:text-xl leading-relaxed mb-8 sm:mb-10 max-w-xl"
+            className="animate-on-enter opacity-0 translate-y-8 transition-all duration-700 delay-400 text-white/80 text-base sm:text-lg md:text-xl leading-relaxed mb-8 sm:mb-10 max-w-sm sm:max-w-xl"
           >
-            Mais do que encontros.{" "}
-            <span className="text-white font-medium">
-              Mais de 400 vidas impactadas. Uma comunidade internacional de líderes onde o propósito é ativado e o crescimento não tem limites.
-            </span>
+            <span className="text-white font-medium">Mais de 400 vidas impactadas.</span>{" "}
+            Uma comunidade internacional de líderes onde o propósito é ativado e o crescimento não tem limites.
           </p>
 
           {/* CTAs */}

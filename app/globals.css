@@ -130,6 +130,11 @@ section, header, footer {
   overflow-x: hidden;
 }
 
+/* Prevent orphaned words in headings — all screens */
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
 /* Touch-friendly tap targets */
 @media (max-width: 768px) {
   /* Minimum tap target size */
@@ -141,18 +146,18 @@ section, header, footer {
     transform: none;
     box-shadow: none;
   }
-  
+
   /* Prevent text overflow on small screens */
   h1, h2, h3, h4, h5, h6 {
     word-break: break-word;
     overflow-wrap: break-word;
   }
-  
+
   /* Ensure buttons don't overflow */
   a, button {
     max-width: 100%;
   }
-  
+
   /* Swipe carousel */
   .swipe-container {
     -webkit-overflow-scrolling: touch;
@@ -165,6 +170,11 @@ section, header, footer {
   .swipe-item {
     scroll-snap-align: start;
     flex-shrink: 0;
+  }
+
+  /* Raise WhatsApp button to avoid covering page CTAs */
+  .whatsapp-float {
+    bottom: 28px;
   }
 }
 

@@ -215,8 +215,8 @@ export default function Testemunhos() {
           </div>
         </div>
 
-        {/* All testimonials grid — 1 col mobile, 2 tablet, 3 desktop */}
-        <div className="anim opacity-0 translate-y-8 transition-all duration-700 delay-300 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+        {/* All testimonials grid — hidden on mobile (carousel above is enough), 2 tablet, 3 desktop */}
+        <div className="hidden sm:grid anim opacity-0 translate-y-8 transition-all duration-700 delay-300 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
           {testimonials.map((t, i) => (
             <button
               key={i}

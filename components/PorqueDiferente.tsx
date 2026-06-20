@@ -78,7 +78,8 @@ export default function PorqueDiferente() {
             Não é apenas mais <span className="text-gradient-gold">um grupo.</span>
           </h2>
           <p className="text-white/60 text-base sm:text-lg max-w-2xl mx-auto">
-            Num mundo saturado de conteúdo, poucas pessoas têm acesso a uma comunidade que combina crescimento espiritual profundo, alinhamento prático e uma rede internacional de líderes com propósito.
+            <span className="hidden sm:inline">Num mundo saturado de conteúdo, poucas pessoas têm acesso a uma comunidade que combina crescimento espiritual profundo, alinhamento prático e uma rede internacional de líderes com propósito.</span>
+            <span className="sm:hidden">Uma comunidade que une crescimento espiritual, alinhamento prático e uma rede internacional de líderes com propósito.</span>
           </p>
         </div>
 
@@ -99,7 +100,7 @@ export default function PorqueDiferente() {
                     <span className="text-red-400 mt-0.5 flex-shrink-0">✕</span>
                     <div>
                       <p className="text-white/60 font-medium text-xs sm:text-sm">{d.title}</p>
-                      <p className="text-white/40 text-xs mt-0.5 sm:mt-1">{d.desc}</p>
+                      <p className="hidden sm:block text-white/40 text-xs mt-0.5 sm:mt-1">{d.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -120,7 +121,7 @@ export default function PorqueDiferente() {
                     <span className="text-[#F7931E] mt-0.5 flex-shrink-0">✦</span>
                     <div>
                       <p className="text-white font-medium text-xs sm:text-sm">{d.title}</p>
-                      <p className="text-white/50 text-xs mt-0.5 sm:mt-1">{d.desc}</p>
+                      <p className="hidden sm:block text-white/50 text-xs mt-0.5 sm:mt-1">{d.desc}</p>
                     </div>
                   </div>
                 ))}
