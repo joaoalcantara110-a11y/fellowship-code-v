@@ -58,14 +58,15 @@ export default function CTAFinal() {
         </div>
 
         {/* Title */}
-        <h2 className="anim opacity-0 translate-y-8 transition-all duration-700 delay-100 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4 sm:mb-6">
+        <h2 className="anim opacity-0 translate-y-8 transition-all duration-700 delay-100 text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4 sm:mb-6">
           Está na altura de caminhar com pessoas que o{" "}
           <span className="text-gradient-gold">desafiam a crescer.</span>
         </h2>
 
         {/* Text */}
-        <p className="anim opacity-0 translate-y-8 transition-all duration-700 delay-200 text-white/70 text-base sm:text-lg md:text-xl leading-relaxed mb-8 sm:mb-10 max-w-2xl mx-auto">
-          Junte-se a uma comunidade global de líderes e empreendedores. O próximo encontro pode ser o ponto de viragem para a sua liderança e o seu propósito.
+        <p className="anim opacity-0 translate-y-8 transition-all duration-700 delay-200 text-white/60 sm:text-white/70 text-sm sm:text-lg md:text-xl leading-relaxed mb-8 sm:mb-10 max-w-xs sm:max-w-2xl mx-auto">
+          O próximo encontro pode ser o ponto de viragem para a sua liderança e propósito.
+          <span className="hidden sm:inline"> Junte-se a uma comunidade global de líderes e empreendedores.</span>
         </p>
 
         {/* CTA — full width on mobile */}

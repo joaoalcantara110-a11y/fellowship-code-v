@@ -38,7 +38,7 @@ export default function Sobre() {
                 src="/images/mentor1.webp"
                 alt="Dr. Venceslau Andrade"
                 fill
-                className="object-cover object-center"
+                className="object-cover object-top sm:object-center"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 40vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#060f22]/60 to-transparent" />
@@ -79,7 +79,7 @@ export default function Sobre() {
                 O <span className="text-white font-semibold">Fellowship Code V</span> é um espaço
                 contínuo de comunhão, crescimento espiritual e alinhamento prático.
               </p>
-              <p className="text-white/70 text-base sm:text-lg leading-relaxed">
+              <p className="hidden sm:block text-white/70 text-base sm:text-lg leading-relaxed">
                 Uma transmissão privada semanal onde líderes, empreendedores e visionários
                 comprometidos com o Reino se conectam em tempo real com{" "}
                 <span className="text-[#F7931E] font-semibold">Dr. Venceslau Andrade</span>,{" "}

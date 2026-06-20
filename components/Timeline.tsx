@@ -76,7 +76,7 @@ export default function Timeline() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="anim opacity-0 translate-y-8 transition-all duration-700 text-center mb-10 sm:mb-20">
+        <div className="anim opacity-0 translate-y-8 transition-all duration-700 text-center mb-8 sm:mb-20">
           <span className="inline-block px-3 sm:px-4 py-1.5 rounded-full bg-[#F7931E]/10 border border-[#F7931E]/30 text-[#F7931E] text-xs sm:text-sm font-medium tracking-wide uppercase mb-4">
             Cada Sessão
           </span>
@@ -121,7 +121,7 @@ export default function Timeline() {
 
                   {/* Content card */}
                   <div className={`flex-1 lg:w-5/12 ${i % 2 === 0 ? "lg:text-right" : "lg:text-left"} mb-0 lg:mb-16`}>
-                    <div className="glass rounded-2xl p-5 sm:p-6 lg:p-8 border border-white/10 hover:border-[#F7931E]/30 transition-all duration-300">
+                    <div className="glass rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/10 hover:border-[#F7931E]/30 transition-all duration-300">
                       {/* Desktop icon row */}
                       <div className={`hidden lg:flex items-center gap-3 mb-4 ${i % 2 === 0 ? "lg:justify-end" : "lg:justify-start"}`}>
                         <div className="w-10 h-10 rounded-xl bg-[#F7931E]/20 flex items-center justify-center text-[#F7931E]">
@@ -131,8 +131,8 @@ export default function Timeline() {
                       </div>
                       {/* Mobile number badge */}
                       <span className="lg:hidden text-[#F7931E] font-bold text-xs tracking-widest mb-2 block">{step.number}</span>
-                      <h3 className="text-white text-lg sm:text-xl font-bold mb-2 sm:mb-3">{step.title}</h3>
-                      <p className="text-white/60 text-sm sm:text-base leading-relaxed">{step.desc}</p>
+                      <h3 className="text-white text-base sm:text-xl font-bold mb-1.5 sm:mb-3">{step.title}</h3>
+                      <p className="text-white/60 text-xs sm:text-base leading-relaxed">{step.desc}</p>
                     </div>
                   </div>
 

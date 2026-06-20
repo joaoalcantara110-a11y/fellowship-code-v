@@ -53,8 +53,9 @@ export default function ParaQuem() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
             Esta comunidade é para <span className="text-gradient-gold">si.</span>
           </h2>
-          <p className="text-white/60 text-base sm:text-lg max-w-2xl mx-auto px-2">
-            O Fellowship Code V é o ambiente desenhado para quem recusa a estagnação. Se acredita que o seu crescimento exige a comunidade certa, este é o seu lugar.
+          <p className="text-white/60 text-sm sm:text-lg max-w-xs sm:max-w-2xl mx-auto">
+            <span className="sm:hidden">O ambiente certo para quem recusa a estagnação e quer crescer.</span>
+            <span className="hidden sm:inline">O Fellowship Code V é o ambiente desenhado para quem recusa a estagnação. Se acredita que o seu crescimento exige a comunidade certa, este é o seu lugar.</span>
           </p>
         </div>
 
@@ -79,8 +80,8 @@ export default function ParaQuem() {
 
         {/* Bottom quote */}
         <div className="anim opacity-0 translate-y-8 transition-all duration-700 delay-500 mt-10 sm:mt-16 text-center">
-          <div className="inline-block glass rounded-2xl px-5 sm:px-8 py-5 sm:py-6 border border-[#F7931E]/20 max-w-2xl">
-            <p className="text-white/80 text-base sm:text-lg italic leading-relaxed">
+          <div className="inline-block glass rounded-2xl px-5 sm:px-8 py-4 sm:py-6 border border-[#F7931E]/20 max-w-xs sm:max-w-2xl">
+            <p className="text-white/80 text-sm sm:text-lg italic leading-relaxed">
               "Quem cresce sozinho vai mais rápido.{" "}
               <span className="text-[#F7931E] font-semibold not-italic">
                 Quem cresce em comunidade vai mais longe.
