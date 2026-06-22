@@ -36,14 +36,14 @@ export default function ComoFunciona() {
     <section
       id="como-funciona"
       ref={sectionRef}
-      className="relative py-16 sm:py-24 md:py-32 bg-gradient-to-b from-[#0a1a38] to-[#060f22] overflow-hidden"
+      className="relative py-12 sm:py-20 md:py-32 bg-gradient-to-b from-[#0a1a38] to-[#060f22] overflow-hidden"
     >
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#F7931E]/20 to-transparent" />
       <div className="hidden sm:block absolute top-0 right-0 w-64 md:w-80 h-64 md:h-80 bg-[#F7931E]/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="anim opacity-0 translate-y-8 transition-all duration-700 text-center mb-10 sm:mb-16">
+        <div className="anim opacity-0 translate-y-8 transition-all duration-700 text-center mb-8 sm:mb-12">
           <span className="inline-block px-3 sm:px-4 py-1.5 rounded-full bg-[#F7931E]/10 border border-[#F7931E]/30 text-[#F7931E] text-xs sm:text-sm font-medium tracking-wide uppercase mb-4">
             Como Funciona
           </span>
@@ -57,21 +57,21 @@ export default function ComoFunciona() {
 
         {/* Main feature card */}
         <div className="anim opacity-0 translate-y-8 transition-all duration-700 delay-100 mb-8 sm:mb-12">
-          <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden bg-gradient-to-br from-[#1e3a6e]/50 to-[#122752]/50 border border-[#F7931E]/20 p-6 sm:p-8 md:p-12">
+          <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden bg-gradient-to-br from-[#1e3a6e]/50 to-[#122752]/50 border border-[#F7931E]/20 p-4 sm:p-6 md:p-8">
             <div className="absolute top-0 right-0 w-48 md:w-64 h-48 md:h-64 bg-[#F7931E]/10 rounded-full blur-3xl" />
             <div className="relative z-10 grid grid-cols-3 gap-4 sm:gap-8 text-center">
               <div>
-                <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#F7931E] mb-1 sm:mb-2">18h</div>
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#F7931E] mb-1 sm:mb-2">18h</div>
                 <div className="text-white font-semibold text-sm sm:text-base">Portugal</div>
                 <div className="text-white/50 text-xs sm:text-sm mt-0.5 sm:mt-1">Todas as 5ª feiras</div>
               </div>
               <div className="border-x border-white/10">
-                <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#F7931E] mb-1 sm:mb-2">90</div>
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#F7931E] mb-1 sm:mb-2">90</div>
                 <div className="text-white font-semibold text-sm sm:text-base">Minutos</div>
                 <div className="text-white/50 text-xs sm:text-sm mt-0.5 sm:mt-1">Por sessão</div>
               </div>
               <div>
-                <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#F7931E] mb-1 sm:mb-2">∞</div>
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#F7931E] mb-1 sm:mb-2">∞</div>
                 <div className="text-white font-semibold text-sm sm:text-base">Crescimento</div>
                 <div className="text-white/50 text-xs sm:text-sm mt-0.5 sm:mt-1">Contínuo</div>
               </div>
@@ -79,8 +79,8 @@ export default function ComoFunciona() {
           </div>
         </div>
 
-        {/* Features grid — 2 cols on mobile, 4 on desktop */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
+        {/* Features grid — 2 cols on mobile, 2 on sm, 4 on lg */}
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
           {features.map((feature, i) => (
             <div
               key={feature.title}

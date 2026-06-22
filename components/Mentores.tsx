@@ -27,14 +27,14 @@ export default function Mentores() {
     <section
       id="mentores"
       ref={sectionRef}
-      className="relative py-16 sm:py-24 md:py-32 bg-gradient-to-b from-[#060f22] to-[#0a1a38] overflow-hidden"
+      className="relative py-12 sm:py-20 md:py-32 bg-gradient-to-b from-[#060f22] to-[#0a1a38] overflow-hidden"
     >
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#F7931E]/20 to-transparent" />
       <div className="hidden sm:block absolute top-1/2 left-0 w-64 md:w-96 h-64 md:h-96 bg-[#F7931E]/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="anim opacity-0 translate-y-8 transition-all duration-700 text-center mb-6 sm:mb-20">
+        <div className="anim opacity-0 translate-y-8 transition-all duration-700 text-center mb-6 sm:mb-16">
           <span className="inline-block px-3 sm:px-4 py-1.5 rounded-full bg-[#F7931E]/10 border border-[#F7931E]/30 text-[#F7931E] text-xs sm:text-sm font-medium tracking-wide uppercase mb-4">
             Os Mentores
           </span>
@@ -45,10 +45,10 @@ export default function Mentores() {
         </div>
 
         {/* Dr. Venceslau */}
-        <div className="anim opacity-0 translate-y-8 transition-all duration-700 delay-100 mb-8 sm:mb-20">
+        <div className="anim opacity-0 translate-y-8 transition-all duration-700 delay-100 mb-6 sm:mb-16">
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
             {/* Images — simplified for mobile */}
-            <div className="relative pb-6 sm:pb-8">
+            <div className="relative pb-4 sm:pb-6">
               {/* Mobile: single featured image */}
               <div className="block sm:hidden relative rounded-2xl overflow-hidden aspect-[3/4]">
                 <Image
@@ -71,7 +71,7 @@ export default function Mentores() {
                     sizes="(max-width: 1024px) 40vw, 30vw"
                   />
                 </div>
-                <div className="space-y-4 pt-8">
+                <div className="space-y-3 pt-6">
                   <div className="relative rounded-2xl overflow-hidden aspect-square">
                     <Image
                       src="/images/mentor1.webp"
@@ -93,7 +93,7 @@ export default function Mentores() {
                 </div>
               </div>
               {/* Name badge */}
-              <div className="absolute bottom-0 left-2 sm:left-4 glass rounded-xl px-4 sm:px-5 py-2 sm:py-3 border border-[#F7931E]/30">
+              <div className="absolute bottom-0 left-3 sm:left-4 glass rounded-xl px-4 sm:px-5 py-2 sm:py-3 border border-[#F7931E]/30">
                 <p className="text-[#F7931E] font-bold text-xs sm:text-sm">Dr. Venceslau Andrade</p>
                 <p className="text-white/50 text-xs">Mentor Internacional</p>
               </div>

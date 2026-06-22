@@ -39,14 +39,14 @@ export default function ParaQuem() {
     <section
       id="para-quem"
       ref={sectionRef}
-      className="relative py-16 sm:py-24 md:py-32 bg-gradient-to-b from-[#060f22] to-[#0a1a38] overflow-hidden"
+      className="relative py-12 sm:py-20 md:py-32 bg-gradient-to-b from-[#060f22] to-[#0a1a38] overflow-hidden"
     >
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#F7931E]/20 to-transparent" />
       <div className="hidden sm:block absolute bottom-0 left-0 w-64 md:w-96 h-64 md:h-96 bg-[#F7931E]/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="anim opacity-0 translate-y-8 transition-all duration-700 text-center mb-10 sm:mb-16">
+        <div className="anim opacity-0 translate-y-8 transition-all duration-700 text-center mb-8 sm:mb-12">
           <span className="inline-block px-3 sm:px-4 py-1.5 rounded-full bg-[#F7931E]/10 border border-[#F7931E]/30 text-[#F7931E] text-xs sm:text-sm font-medium tracking-wide uppercase mb-4">
             Para Quem É
           </span>
@@ -60,7 +60,7 @@ export default function ParaQuem() {
         </div>
 
         {/* Cards Grid — 2 cols on mobile, 3 on tablet, 5 on desktop */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-5 gap-3 sm:gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-4">
           {audience.map((item, i) => (
             <div
               key={item.title}
@@ -68,18 +68,18 @@ export default function ParaQuem() {
               style={{ transitionDelay: `${i * 50}ms` }}
             >
               <div className="group h-full p-4 sm:p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-[#F7931E]/40 hover:bg-[#F7931E]/5 transition-all duration-300 cursor-default">
-                <div className="text-2xl sm:text-3xl mb-2 sm:mb-3">{item.icon}</div>
-                <h3 className="text-white font-semibold text-xs sm:text-sm mb-1.5 sm:mb-2 group-hover:text-[#F7931E] transition-colors leading-tight">
+                <div className="text-lg sm:text-3xl mb-2 sm:mb-3">{item.icon}</div>
+                <h3 className="text-white font-semibold text-xs sm:text-sm mb-1 group-hover:text-[#F7931E] transition-colors leading-tight line-clamp-2">
                   {item.title}
                 </h3>
-                <p className="text-white/50 text-xs leading-relaxed hidden sm:block">{item.desc}</p>
+                <p className="text-white/50 text-xs leading-tight line-clamp-1">{item.desc}</p>
               </div>
             </div>
           ))}
         </div>
 
         {/* Bottom quote */}
-        <div className="anim opacity-0 translate-y-8 transition-all duration-700 delay-500 mt-10 sm:mt-16 text-center">
+        <div className="anim opacity-0 translate-y-8 transition-all duration-700 delay-500 mt-8 sm:mt-12 text-center">
           <div className="inline-block glass rounded-2xl px-5 sm:px-8 py-4 sm:py-6 border border-[#F7931E]/20 max-w-xs sm:max-w-2xl">
             <p className="text-white/80 text-sm sm:text-lg italic leading-relaxed">
               "Quem cresce sozinho vai mais rápido.{" "}

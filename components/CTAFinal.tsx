@@ -29,7 +29,7 @@ export default function CTAFinal() {
     <section
       id="entrar"
       ref={sectionRef}
-      className="relative py-16 sm:py-24 md:py-40 overflow-hidden"
+      className="relative py-12 sm:py-24 md:py-32 overflow-hidden"
     >
       {/* Background */}
       <div className="absolute inset-0 z-0">
@@ -58,13 +58,13 @@ export default function CTAFinal() {
         </div>
 
         {/* Title */}
-        <h2 className="anim opacity-0 translate-y-8 transition-all duration-700 delay-100 text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4 sm:mb-6">
+        <h2 className="anim opacity-0 translate-y-8 transition-all duration-700 delay-100 text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4 sm:mb-5">
           Está na altura de caminhar com pessoas que o{" "}
           <span className="text-gradient-gold">desafiam a crescer.</span>
         </h2>
 
         {/* Text */}
-        <p className="anim opacity-0 translate-y-8 transition-all duration-700 delay-200 text-white/60 sm:text-white/70 text-sm sm:text-lg md:text-xl leading-relaxed mb-8 sm:mb-10 max-w-xs sm:max-w-2xl mx-auto">
+        <p className="anim opacity-0 translate-y-8 transition-all duration-700 delay-200 text-white/60 sm:text-white/70 text-xs sm:text-base md:text-lg leading-snug sm:leading-relaxed mb-6 sm:mb-8 max-w-xs sm:max-w-2xl mx-auto">
           O próximo encontro pode ser o ponto de viragem para a sua liderança e propósito.
           <span className="hidden sm:inline"> Junte-se a uma comunidade global de líderes e empreendedores.</span>
         </p>
@@ -85,7 +85,7 @@ export default function CTAFinal() {
         </div>
 
         {/* Trust indicators */}
-        <div className="anim opacity-0 translate-y-8 transition-all duration-700 delay-400 flex flex-wrap justify-center gap-4 sm:gap-6 mt-8 sm:mt-12">
+        <div className="anim opacity-0 translate-y-8 transition-all duration-700 delay-400 flex flex-wrap justify-center gap-2 sm:gap-4 mt-6 sm:mt-8">
           {[
             { icon: "🔒", text: "Grupo Oficial Verificado" },
             { icon: "✓", text: "Transmissão Privada" },

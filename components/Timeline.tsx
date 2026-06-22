@@ -69,14 +69,14 @@ export default function Timeline() {
     <section
       id="sessoes"
       ref={sectionRef}
-      className="relative py-16 sm:py-24 md:py-32 bg-[#0a1a38] overflow-hidden"
+      className="relative py-12 sm:py-20 md:py-32 bg-[#0a1a38] overflow-hidden"
     >
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#F7931E]/20 to-transparent" />
       <div className="hidden sm:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] md:w-[600px] h-[400px] md:h-[600px] bg-[#F7931E]/3 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="anim opacity-0 translate-y-8 transition-all duration-700 text-center mb-8 sm:mb-20">
+        <div className="anim opacity-0 translate-y-8 transition-all duration-700 text-center mb-8 sm:mb-16">
           <span className="inline-block px-3 sm:px-4 py-1.5 rounded-full bg-[#F7931E]/10 border border-[#F7931E]/30 text-[#F7931E] text-xs sm:text-sm font-medium tracking-wide uppercase mb-4">
             Cada Sessão
           </span>
@@ -97,7 +97,7 @@ export default function Timeline() {
           {/* Mobile vertical line */}
           <div className="absolute left-5 top-0 bottom-0 w-px bg-gradient-to-b from-[#F7931E]/40 via-[#F7931E]/20 to-transparent lg:hidden" />
 
-          <div className="space-y-6 sm:space-y-8 lg:space-y-0">
+          <div className="space-y-5 sm:space-y-6 lg:space-y-0">
             {steps.map((step, i) => (
               <div
                 key={step.number}

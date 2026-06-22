@@ -56,12 +56,12 @@ export default function Hero() {
       <div className="hidden sm:block absolute bottom-1/4 left-1/4 w-48 md:w-64 h-48 md:h-64 bg-[#1e3a6e]/30 rounded-full blur-3xl pointer-events-none" />
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 sm:pt-20 pb-16 sm:pb-24">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-14 pb-12 sm:pb-16">
         <div className="max-w-3xl">
 
           {/* Badge */}
           <div
-            className="animate-on-enter opacity-0 translate-y-8 transition-all duration-700 delay-100 inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-[#F7931E]/10 border border-[#F7931E]/30 mb-3 sm:mb-6"
+            className="animate-on-enter opacity-0 translate-y-8 transition-all duration-700 delay-100 inline-flex items-center gap-2 px-4 sm:px-4 py-2 sm:py-2 rounded-full bg-[#F7931E]/10 border border-[#F7931E]/30 mb-3 sm:mb-4"
           >
             <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#F7931E] animate-pulse flex-shrink-0" />
             <span className="text-[#F7931E] text-xs font-medium tracking-wide uppercase">
@@ -82,7 +82,7 @@ export default function Hero() {
 
           {/* Title — highest priority element */}
           <h1
-            className="animate-on-enter opacity-0 translate-y-8 transition-all duration-700 delay-200 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-2 sm:mb-4"
+            className="animate-on-enter opacity-0 translate-y-8 transition-all duration-700 delay-200 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-2 sm:mb-3"
           >
             FELLOWSHIP{" "}
             <span className="text-gradient-gold">CODE V</span>
@@ -95,7 +95,7 @@ export default function Hero() {
 
           {/* Description — deprioritized on mobile */}
           <p
-            className="animate-on-enter opacity-0 translate-y-8 transition-all duration-700 delay-300 text-white/60 sm:text-white/80 text-sm sm:text-lg md:text-xl leading-relaxed mb-5 sm:mb-10 max-w-xs sm:max-w-xl"
+            className="animate-on-enter opacity-0 translate-y-8 transition-all duration-700 delay-300 text-white/60 sm:text-white/80 text-xs sm:text-base md:text-lg leading-snug sm:leading-relaxed mb-5 sm:mb-8 max-w-xs sm:max-w-xl"
           >
             <span className="text-white/90 sm:text-white font-medium">Mais de 400 vidas impactadas.</span>{" "}
             Uma comunidade internacional de líderes onde o propósito é ativado.
@@ -131,7 +131,7 @@ export default function Hero() {
 
           {/* Stats — 2×2 grid on mobile, row on desktop */}
           <div
-            className="animate-on-enter opacity-0 translate-y-8 transition-all duration-700 delay-500 grid grid-cols-2 sm:flex sm:flex-wrap gap-4 sm:gap-8 mt-7 sm:mt-14"
+            className="animate-on-enter opacity-0 translate-y-8 transition-all duration-700 delay-500 grid grid-cols-2 sm:flex sm:flex-wrap gap-4 sm:gap-8 mt-5 sm:mt-10"
           >
             {[
               { value: "18h (PT)", label: "Todas as 5ª Feiras" },
