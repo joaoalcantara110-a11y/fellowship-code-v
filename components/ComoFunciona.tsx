@@ -57,42 +57,42 @@ export default function ComoFunciona() {
 
         {/* Main feature card */}
         <div className="anim opacity-0 translate-y-8 transition-all duration-700 delay-100 mb-8 sm:mb-12">
-          <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden bg-gradient-to-br from-[#1e3a6e]/50 to-[#122752]/50 border border-[#F7931E]/20 p-4 sm:p-6 md:p-8">
+          <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden bg-gradient-to-br from-[#1e3a6e]/50 to-[#122752]/50 border border-[#F7931E]/20 p-6 sm:p-8 md:p-10">
             <div className="absolute top-0 right-0 w-48 md:w-64 h-48 md:h-64 bg-[#F7931E]/10 rounded-full blur-3xl" />
             <div className="relative z-10 grid grid-cols-3 gap-4 sm:gap-8 text-center">
-              <div>
-                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#F7931E] mb-1 sm:mb-2">18h</div>
-                <div className="text-white font-semibold text-sm sm:text-base">Portugal</div>
-                <div className="text-white/50 text-xs sm:text-sm mt-0.5 sm:mt-1">Todas as 5ª feiras</div>
+              <div className="flex flex-col items-center">
+                <div className="text-3xl sm:text-3xl md:text-4xl font-bold text-[#F7931E] mb-2 sm:mb-2">18h</div>
+                <div className="text-white font-semibold text-xs sm:text-base">Portugal</div>
+                <div className="text-white/50 text-[10px] sm:text-sm mt-1 sm:mt-1 leading-snug">Todas as 5ª feiras</div>
               </div>
-              <div className="border-x border-white/10">
-                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#F7931E] mb-1 sm:mb-2">90</div>
-                <div className="text-white font-semibold text-sm sm:text-base">Minutos</div>
-                <div className="text-white/50 text-xs sm:text-sm mt-0.5 sm:mt-1">Por sessão</div>
+              <div className="border-x border-white/10 flex flex-col items-center">
+                <div className="text-3xl sm:text-3xl md:text-4xl font-bold text-[#F7931E] mb-2 sm:mb-2">90</div>
+                <div className="text-white font-semibold text-xs sm:text-base">Minutos</div>
+                <div className="text-white/50 text-[10px] sm:text-sm mt-1 sm:mt-1 leading-snug">Por sessão</div>
               </div>
-              <div>
-                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#F7931E] mb-1 sm:mb-2">∞</div>
-                <div className="text-white font-semibold text-sm sm:text-base">Crescimento</div>
-                <div className="text-white/50 text-xs sm:text-sm mt-0.5 sm:mt-1">Contínuo</div>
+              <div className="flex flex-col items-center">
+                <div className="text-3xl sm:text-3xl md:text-4xl font-bold text-[#F7931E] mb-2 sm:mb-2">∞</div>
+                <div className="text-white font-semibold text-xs sm:text-base">Crescimento</div>
+                <div className="text-white/50 text-[10px] sm:text-sm mt-1 sm:mt-1 leading-snug">Contínuo</div>
               </div>
             </div>
           </div>
         </div>
 
         {/* Features grid — 2 cols on mobile, 2 on sm, 4 on lg */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
           {features.map((feature, i) => (
             <div
               key={feature.title}
               className="anim opacity-0 translate-y-8 transition-all duration-700"
               style={{ transitionDelay: `${(i + 2) * 60}ms` }}
             >
-              <div className="group h-full p-3 sm:p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#F7931E]/40 hover:bg-[#F7931E]/5 transition-all duration-300">
-                <div className="text-2xl sm:text-3xl mb-2 sm:mb-4">{feature.icon}</div>
-                <h3 className="text-white font-semibold text-xs sm:text-sm mb-1 sm:mb-2 group-hover:text-[#F7931E] transition-colors leading-tight">
+              <div className="group h-full p-4 sm:p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#F7931E]/40 hover:bg-[#F7931E]/5 transition-all duration-300">
+                <div className="text-2xl sm:text-3xl mb-3 sm:mb-4">{feature.icon}</div>
+                <h3 className="text-white font-semibold text-xs sm:text-sm mb-2 sm:mb-2 group-hover:text-[#F7931E] transition-colors leading-snug">
                   {feature.title}
                 </h3>
-                <p className="text-white/50 text-xs leading-relaxed hidden sm:block">{feature.desc}</p>
+                <p className="text-white/50 text-[10px] sm:text-xs leading-relaxed line-clamp-2 sm:line-clamp-none">{feature.desc}</p>
               </div>
             </div>
           ))}

@@ -85,22 +85,22 @@ export default function PorqueDiferente() {
 
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
           {/* Left */}
-          <div className="space-y-5 sm:space-y-6">
+          <div className="space-y-6 sm:space-y-6">
             <div className="anim opacity-0 translate-y-8 transition-all duration-700 delay-100">
-              <h3 className="text-white/40 text-xs sm:text-sm font-semibold uppercase tracking-widest mb-3 sm:mb-4">
+              <h3 className="text-white/40 text-xs sm:text-sm font-semibold uppercase tracking-widest mb-4 sm:mb-4">
                 O que não é
               </h3>
-              <div className="space-y-2 sm:space-y-3">
+              <div className="space-y-3 sm:space-y-3">
                 {diferenciais.map((d, i) => (
                   <div
                     key={d.title}
-                    className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl bg-red-500/5 border border-red-500/10"
+                    className="flex items-start gap-3 sm:gap-4 p-4 sm:p-4 rounded-xl bg-red-500/5 border border-red-500/10"
                     style={{ transitionDelay: `${i * 60}ms` }}
                   >
                     <span className="text-red-400 mt-0.5 flex-shrink-0">✕</span>
                     <div>
-                      <p className="text-white/60 font-medium text-xs sm:text-sm">{d.title}</p>
-                      <p className="hidden sm:block text-white/40 text-xs mt-0.5 sm:mt-1">{d.desc}</p>
+                      <p className="text-white/70 font-medium text-xs sm:text-sm leading-snug">{d.title}</p>
+                      <p className="text-white/40 text-[10px] sm:text-xs mt-1 sm:mt-1 leading-relaxed">{d.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -108,20 +108,20 @@ export default function PorqueDiferente() {
             </div>
 
             <div className="anim opacity-0 translate-y-8 transition-all duration-700 delay-300">
-              <h3 className="text-[#F7931E]/70 text-xs sm:text-sm font-semibold uppercase tracking-widest mb-3 sm:mb-4">
+              <h3 className="text-[#F7931E]/70 text-xs sm:text-sm font-semibold uppercase tracking-widest mb-4 sm:mb-4">
                 O que é
               </h3>
-              <div className="space-y-2 sm:space-y-3">
+              <div className="space-y-3 sm:space-y-3">
                 {diferenciais2.map((d, i) => (
                   <div
                     key={d.title}
-                    className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl bg-[#F7931E]/5 border border-[#F7931E]/15"
+                    className="flex items-start gap-3 sm:gap-4 p-4 sm:p-4 rounded-xl bg-[#F7931E]/5 border border-[#F7931E]/15"
                     style={{ transitionDelay: `${(i + 3) * 60}ms` }}
                   >
                     <span className="text-[#F7931E] mt-0.5 flex-shrink-0">✦</span>
                     <div>
-                      <p className="text-white font-medium text-xs sm:text-sm">{d.title}</p>
-                      <p className="hidden sm:block text-white/50 text-xs mt-0.5 sm:mt-1">{d.desc}</p>
+                      <p className="text-white font-medium text-xs sm:text-sm leading-snug">{d.title}</p>
+                      <p className="text-white/50 text-[10px] sm:text-xs mt-1 sm:mt-1 leading-relaxed">{d.desc}</p>
                     </div>
                   </div>
                 ))}

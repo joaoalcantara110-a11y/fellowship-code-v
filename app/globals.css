@@ -166,15 +166,20 @@ h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
   }
 
+  /* Comfortable line-height for mobile headings */
+  h1 { line-height: 1.18; }
+  h2 { line-height: 1.22; }
+  h3 { line-height: 1.3; }
+
   /* Better body text rhythm on mobile */
   p {
-    line-height: 1.7;
+    line-height: 1.75;
     letter-spacing: -0.01em;
   }
 
-  /* WhatsApp float: guaranteed perfect circle */
+  /* WhatsApp float: guaranteed perfect circle + safe bottom */
   .whatsapp-float {
-    bottom: 24px;
+    bottom: max(24px, env(safe-area-inset-bottom, 24px));
     right: 16px;
   }
   .whatsapp-float a {
@@ -191,10 +196,20 @@ h1, h2, h3, h4, h5, h6 {
     gap: 0 !important;
     box-shadow: 0 4px 20px rgba(37, 211, 102, 0.35), 0 2px 8px rgba(0,0,0,0.25) !important;
   }
+  /* SVG inside WhatsApp float perfectly centered */
+  .whatsapp-float a svg {
+    display: block;
+    flex-shrink: 0;
+  }
 
   /* Hero overlay: less dark on mobile so background image breathes */
   .hero-bg-overlay {
     opacity: 0.82;
+  }
+
+  /* Card grids: consistent internal padding on small screens */
+  .mobile-card-pad {
+    padding: 1rem;
   }
 
   /* Swipe carousel */
@@ -207,5 +222,10 @@ h1, h2, h3, h4, h5, h6 {
   .swipe-item {
     scroll-snap-align: start;
     flex-shrink: 0;
+  }
+
+  /* Prevent any horizontal overflow globally */
+  main, section, article, aside, header, footer, nav, div {
+    max-width: 100%;
   }
 }

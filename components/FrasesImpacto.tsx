@@ -76,7 +76,7 @@ export default function FrasesImpacto() {
           {frases.map((frase, i) => (
             <div
               key={i}
-              className={`group p-5 sm:p-8 rounded-2xl border transition-all duration-300 ${
+              className={`group p-6 sm:p-8 rounded-2xl border transition-all duration-300 ${
                 i === 0
                   ? "bg-gradient-to-br from-[#F7931E]/15 to-[#F7931E]/5 border-[#F7931E]/30"
                   : "bg-white/5 border-white/10 hover:border-[#F7931E]/30 hover:bg-[#F7931E]/5"
@@ -87,7 +87,7 @@ export default function FrasesImpacto() {
               <p className={`leading-relaxed font-medium text-sm sm:text-base ${i === 0 ? "text-white sm:text-lg" : "text-white/80"}`}>
                 {frase}
               </p>
-              <div className="mt-3 sm:mt-4 w-8 h-0.5 bg-[#F7931E]/40 group-hover:w-16 transition-all duration-300" />
+              <div className="mt-4 sm:mt-4 w-8 h-0.5 bg-[#F7931E]/40 group-hover:w-16 transition-all duration-300" />
             </div>
           ))}
         </div>

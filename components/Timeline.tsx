@@ -97,7 +97,7 @@ export default function Timeline() {
           {/* Mobile vertical line */}
           <div className="absolute left-5 top-0 bottom-0 w-px bg-gradient-to-b from-[#F7931E]/40 via-[#F7931E]/20 to-transparent lg:hidden" />
 
-          <div className="space-y-5 sm:space-y-6 lg:space-y-0">
+          <div className="space-y-6 sm:space-y-8 lg:space-y-0">
             {steps.map((step, i) => (
               <div
                 key={step.number}
@@ -121,7 +121,7 @@ export default function Timeline() {
 
                   {/* Content card */}
                   <div className={`flex-1 lg:w-5/12 ${i % 2 === 0 ? "lg:text-right" : "lg:text-left"} mb-0 lg:mb-16`}>
-                    <div className="glass rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/10 hover:border-[#F7931E]/30 transition-all duration-300">
+                    <div className="glass rounded-2xl p-5 sm:p-6 lg:p-8 border border-white/10 hover:border-[#F7931E]/30 transition-all duration-300">
                       {/* Desktop icon row */}
                       <div className={`hidden lg:flex items-center gap-3 mb-4 ${i % 2 === 0 ? "lg:justify-end" : "lg:justify-start"}`}>
                         <div className="w-10 h-10 rounded-xl bg-[#F7931E]/20 flex items-center justify-center text-[#F7931E]">
@@ -130,9 +130,9 @@ export default function Timeline() {
                         <span className="text-[#F7931E] font-bold text-sm tracking-widest">{step.number}</span>
                       </div>
                       {/* Mobile number badge */}
-                      <span className="lg:hidden text-[#F7931E] font-bold text-xs tracking-widest mb-2 block">{step.number}</span>
-                      <h3 className="text-white text-base sm:text-xl font-bold mb-1.5 sm:mb-3">{step.title}</h3>
-                      <p className="text-white/60 text-xs sm:text-base leading-relaxed">{step.desc}</p>
+                      <span className="lg:hidden text-[#F7931E] font-bold text-xs tracking-widest mb-3 block">{step.number}</span>
+                      <h3 className="text-white text-base sm:text-xl font-bold mb-2 sm:mb-3">{step.title}</h3>
+                      <p className="text-white/60 text-sm sm:text-base leading-relaxed">{step.desc}</p>
                     </div>
                   </div>
 

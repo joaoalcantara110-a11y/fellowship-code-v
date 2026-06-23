@@ -45,10 +45,10 @@ export default function Mentores() {
         </div>
 
         {/* Dr. Venceslau */}
-        <div className="anim opacity-0 translate-y-8 transition-all duration-700 delay-100 mb-6 sm:mb-16">
+        <div className="anim opacity-0 translate-y-8 transition-all duration-700 delay-100 mb-8 sm:mb-16">
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
             {/* Images — simplified for mobile */}
-            <div className="relative pb-4 sm:pb-6">
+            <div className="relative pb-8 sm:pb-6">
               {/* Mobile: single featured image */}
               <div className="block sm:hidden relative rounded-2xl overflow-hidden aspect-[3/4]">
                 <Image
@@ -93,19 +93,19 @@ export default function Mentores() {
                 </div>
               </div>
               {/* Name badge */}
-              <div className="absolute bottom-0 left-3 sm:left-4 glass rounded-xl px-4 sm:px-5 py-2 sm:py-3 border border-[#F7931E]/30">
+              <div className="absolute bottom-2 sm:bottom-0 left-3 sm:left-4 glass rounded-xl px-4 sm:px-5 py-2 sm:py-3 border border-[#F7931E]/30">
                 <p className="text-[#F7931E] font-bold text-xs sm:text-sm">Dr. Venceslau Andrade</p>
                 <p className="text-white/50 text-xs">Mentor Internacional</p>
               </div>
             </div>
 
             {/* Content */}
-            <div className="space-y-4 sm:space-y-6">
+            <div className="space-y-5 sm:space-y-6">
               <div>
                 <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2">
                   Dr. Venceslau Andrade
                 </h3>
-                <p className="text-[#F7931E] font-medium text-sm sm:text-base">
+                <p className="text-[#F7931E] font-medium text-sm sm:text-base leading-relaxed">
                   Mentor Internacional · Líder · Empresário · Fundador da CODE V Leadership School
                 </p>
               </div>
@@ -145,12 +145,12 @@ export default function Mentores() {
         <div className="anim opacity-0 translate-y-8 transition-all duration-700 delay-200">
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
             {/* Content — order-2 on mobile (image first) */}
-            <div className="space-y-4 sm:space-y-6 order-2 lg:order-1">
+            <div className="space-y-5 sm:space-y-6 order-2 lg:order-1">
               <div>
                 <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2">
                   Prof. Vaumara Andrade
                 </h3>
-                <p className="text-[#F7931E] font-medium text-sm sm:text-base">
+                <p className="text-[#F7931E] font-medium text-sm sm:text-base leading-relaxed">
                   Mentora · Educadora · Palestrante · Líder
                 </p>
               </div>
@@ -182,7 +182,7 @@ export default function Mentores() {
             </div>
 
             {/* Images — order-1 on mobile */}
-            <div className="relative pb-6 sm:pb-8 order-1 lg:order-2">
+            <div className="relative pb-10 sm:pb-8 order-1 lg:order-2">
               {/* Mobile: single featured image */}
               <div className="block sm:hidden relative rounded-2xl overflow-hidden aspect-[3/4]">
                 <Image
@@ -227,7 +227,7 @@ export default function Mentores() {
                 </div>
               </div>
               {/* Name badge */}
-              <div className="absolute bottom-0 right-2 sm:right-4 glass rounded-xl px-4 sm:px-5 py-2 sm:py-3 border border-[#F7931E]/30">
+              <div className="absolute bottom-2 sm:bottom-0 right-2 sm:right-4 glass rounded-xl px-4 sm:px-5 py-2 sm:py-3 border border-[#F7931E]/30">
                 <p className="text-[#F7931E] font-bold text-xs sm:text-sm">Prof. Vaumara Andrade</p>
                 <p className="text-white/50 text-xs">Mentora & Educadora</p>
               </div>

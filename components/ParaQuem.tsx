@@ -60,7 +60,7 @@ export default function ParaQuem() {
         </div>
 
         {/* Cards Grid — 2 cols on mobile, 3 on tablet, 5 on desktop */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-5 gap-3 sm:gap-4">
           {audience.map((item, i) => (
             <div
               key={item.title}
@@ -68,11 +68,11 @@ export default function ParaQuem() {
               style={{ transitionDelay: `${i * 50}ms` }}
             >
               <div className="group h-full p-4 sm:p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-[#F7931E]/40 hover:bg-[#F7931E]/5 transition-all duration-300 cursor-default">
-                <div className="text-lg sm:text-3xl mb-2 sm:mb-3">{item.icon}</div>
-                <h3 className="text-white font-semibold text-xs sm:text-sm mb-1 group-hover:text-[#F7931E] transition-colors leading-tight line-clamp-2">
+                <div className="text-2xl sm:text-3xl mb-3 sm:mb-3">{item.icon}</div>
+                <h3 className="text-white font-semibold text-xs sm:text-sm mb-2 group-hover:text-[#F7931E] transition-colors leading-snug">
                   {item.title}
                 </h3>
-                <p className="text-white/50 text-xs leading-tight line-clamp-1">{item.desc}</p>
+                <p className="text-white/50 text-[10px] sm:text-xs leading-relaxed line-clamp-2">{item.desc}</p>
               </div>
             </div>
           ))}

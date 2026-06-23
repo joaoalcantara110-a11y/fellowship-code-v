@@ -59,7 +59,7 @@ export default function Beneficios() {
         </div>
 
         {/* Benefits grid — 2 col on mobile, 2 on tablet, 3 on desktop, 5 on xl */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3 sm:gap-4">
           {benefits.map((benefit, i) => (
             <div
               key={benefit.title}
@@ -74,10 +74,10 @@ export default function Beneficios() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-white font-semibold text-xs sm:text-sm mb-1 group-hover:text-[#F7931E] transition-colors leading-tight line-clamp-2">
+                    <h3 className="text-white font-semibold text-xs sm:text-sm mb-1.5 group-hover:text-[#F7931E] transition-colors leading-snug">
                       {benefit.title}
                     </h3>
-                    <p className="text-white/40 text-xs leading-tight line-clamp-1 sm:line-clamp-2">{benefit.desc}</p>
+                    <p className="text-white/40 text-[10px] sm:text-xs leading-relaxed line-clamp-2">{benefit.desc}</p>
                   </div>
                 </div>
               </div>

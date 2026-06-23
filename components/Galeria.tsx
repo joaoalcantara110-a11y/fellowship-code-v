@@ -89,7 +89,7 @@ export default function Galeria() {
         </div>
 
         {/* Main carousel — 4:3 on mobile, 16:9 on desktop */}
-        <div className="anim opacity-0 translate-y-8 transition-all duration-700 delay-100 mb-4 sm:mb-6">
+        <div className="anim opacity-0 translate-y-8 transition-all duration-700 delay-100 mb-5 sm:mb-6">
           <div
             className="relative rounded-2xl sm:rounded-3xl overflow-hidden aspect-[4/3] sm:aspect-video cursor-pointer group select-none"
             onClick={() => setLightbox(active)}
@@ -111,8 +111,8 @@ export default function Galeria() {
                   priority={i === 0}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#060f22]/70 to-transparent" />
-                <div className="absolute bottom-3 sm:bottom-6 left-4 sm:left-6 right-12 sm:right-6">
-                  <p className="text-white font-semibold text-sm sm:text-lg">{img.caption}</p>
+                <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-14 sm:right-6">
+                  <p className="text-white font-semibold text-sm sm:text-lg leading-snug">{img.caption}</p>
                 </div>
               </div>
             ))}
@@ -171,14 +171,14 @@ export default function Galeria() {
         </div>
 
         {/* Dots — mobile only (desktop has thumbnails) */}
-        <div className="flex sm:hidden justify-center gap-2 mt-4">
+        <div className="flex sm:hidden justify-center items-center gap-2.5 mt-5">
           {images.map((_, i) => (
             <button
               key={i}
               onClick={() => setActive(i)}
               aria-label={`Slide ${i + 1}`}
               className={`rounded-full transition-all duration-300 ${
-                i === active ? "w-6 h-2.5 bg-[#F7931E]" : "w-2.5 h-2.5 bg-white/30 hover:bg-white/60"
+                i === active ? "w-7 h-2.5 bg-[#F7931E]" : "w-2.5 h-2.5 bg-white/30 hover:bg-white/60"
               }`}
             />
           ))}

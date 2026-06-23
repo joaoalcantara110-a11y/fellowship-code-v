@@ -146,7 +146,7 @@ export default function Testemunhos() {
         {/* Main testimonial — swipe enabled */}
         <div className="anim opacity-0 translate-y-8 transition-all duration-700 delay-100 max-w-4xl mx-auto mb-6 sm:mb-12">
           <div
-            className={`glass rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 border border-[#F7931E]/20 transition-all duration-300 select-none ${
+            className={`glass rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-8 border border-[#F7931E]/20 transition-all duration-300 select-none ${
               isAnimating ? "opacity-0 translate-y-4" : "opacity-100 translate-y-0"
             }`}
             onTouchStart={handleTouchStart}
@@ -155,7 +155,7 @@ export default function Testemunhos() {
             {/* Quote mark */}
             <div className="text-[#F7931E]/20 text-4xl sm:text-6xl font-serif leading-none mb-2 sm:mb-3 select-none">"</div>
 
-            <blockquote className="text-white text-base sm:text-lg md:text-xl leading-snug sm:leading-relaxed font-light mb-4 sm:mb-6">
+            <blockquote className="text-white text-base sm:text-lg md:text-xl leading-relaxed font-light mb-4 sm:mb-6">
               {testimonials[active].quote}
             </blockquote>
 
@@ -178,10 +178,10 @@ export default function Testemunhos() {
           </div>
 
           {/* Prev/Next buttons */}
-          <div className="flex items-center justify-between mt-3 sm:mt-5">
+          <div className="flex items-center justify-between mt-4 sm:mt-5">
             <button
               onClick={prev}
-              className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-[#F7931E]/20 transition-colors"
+              className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-[#F7931E]/20 transition-colors flex-shrink-0"
               aria-label="Testemunho anterior"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -190,14 +190,14 @@ export default function Testemunhos() {
             </button>
 
             {/* Dots navigation */}
-            <div className="flex justify-center gap-1.5 sm:gap-2 flex-wrap max-w-xs">
+            <div className="flex justify-center gap-2 sm:gap-2 flex-wrap px-2">
               {testimonials.map((_, i) => (
                 <button
                   key={i}
                   onClick={() => goTo(i)}
                   aria-label={`Testemunho ${i + 1}`}
                   className={`rounded-full transition-all duration-300 ${
-                    i === active ? "w-6 sm:w-8 h-2 sm:h-3 bg-[#F7931E]" : "w-2 sm:w-3 h-2 sm:h-3 bg-white/20 hover:bg-white/40"
+                    i === active ? "w-5 sm:w-8 h-2 sm:h-3 bg-[#F7931E]" : "w-2 sm:w-3 h-2 sm:h-3 bg-white/20 hover:bg-white/40"
                   }`}
                 />
               ))}
@@ -205,7 +205,7 @@ export default function Testemunhos() {
 
             <button
               onClick={next}
-              className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-[#F7931E]/20 transition-colors"
+              className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-[#F7931E]/20 transition-colors flex-shrink-0"
               aria-label="Próximo testemunho"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
