@@ -29,7 +29,7 @@ export default function CTAFinal() {
     <section
       id="entrar"
       ref={sectionRef}
-      className="relative py-12 sm:py-24 md:py-32 overflow-hidden"
+      className="relative py-16 sm:py-24 md:py-32 overflow-hidden"
     >
       {/* Background */}
       <div className="absolute inset-0 z-0">
@@ -58,13 +58,13 @@ export default function CTAFinal() {
         </div>
 
         {/* Title */}
-        <h2 className="anim opacity-0 translate-y-8 transition-all duration-700 delay-100 text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4 sm:mb-5">
+        <h2 className="anim opacity-0 translate-y-8 transition-all duration-700 delay-100 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-snug sm:leading-tight mb-4 sm:mb-5">
           Está na altura de caminhar com pessoas que o{" "}
           <span className="text-gradient-gold">desafiam a crescer.</span>
         </h2>
 
         {/* Text */}
-        <p className="anim opacity-0 translate-y-8 transition-all duration-700 delay-200 text-white/60 sm:text-white/70 text-xs sm:text-base md:text-lg leading-snug sm:leading-relaxed mb-6 sm:mb-8 max-w-xs sm:max-w-2xl mx-auto">
+        <p className="anim opacity-0 translate-y-8 transition-all duration-700 delay-200 text-white/60 sm:text-white/70 text-sm sm:text-base md:text-lg leading-relaxed mb-6 sm:mb-8 max-w-sm sm:max-w-2xl mx-auto">
           O próximo encontro pode ser o ponto de viragem para a sua liderança e propósito.
           <span className="hidden sm:inline"> Junte-se a uma comunidade global de líderes e empreendedores.</span>
         </p>

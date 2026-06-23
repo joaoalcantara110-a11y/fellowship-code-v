@@ -124,7 +124,7 @@ export default function Testemunhos() {
     <section
       id="testemunhos"
       ref={sectionRef}
-      className="relative py-12 sm:py-20 md:py-32 bg-[#060f22] overflow-hidden"
+      className="relative py-16 sm:py-20 md:py-32 bg-[#060f22] overflow-hidden"
     >
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#F7931E]/20 to-transparent" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_#1e3a6e/20_0%,_transparent_70%)] pointer-events-none" />

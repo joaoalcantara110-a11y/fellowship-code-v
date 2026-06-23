@@ -87,12 +87,12 @@ export default function ComoFunciona() {
               className="anim opacity-0 translate-y-8 transition-all duration-700"
               style={{ transitionDelay: `${(i + 2) * 60}ms` }}
             >
-              <div className="group h-full p-4 sm:p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#F7931E]/40 hover:bg-[#F7931E]/5 transition-all duration-300">
-                <div className="text-2xl sm:text-3xl mb-3 sm:mb-4">{feature.icon}</div>
-                <h3 className="text-white font-semibold text-xs sm:text-sm mb-2 sm:mb-2 group-hover:text-[#F7931E] transition-colors leading-snug">
+              <div className="group h-full p-5 sm:p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#F7931E]/40 hover:bg-[#F7931E]/5 transition-all duration-300 flex flex-col">
+                <div className="text-3xl sm:text-3xl mb-3 sm:mb-4">{feature.icon}</div>
+                <h3 className="text-white font-semibold text-xs sm:text-sm group-hover:text-[#F7931E] transition-colors leading-snug">
                   {feature.title}
                 </h3>
-                <p className="text-white/50 text-[10px] sm:text-xs leading-relaxed line-clamp-2 sm:line-clamp-none">{feature.desc}</p>
+                <p className="hidden sm:block text-white/50 text-xs leading-relaxed mt-2">{feature.desc}</p>
               </div>
             </div>
           ))}

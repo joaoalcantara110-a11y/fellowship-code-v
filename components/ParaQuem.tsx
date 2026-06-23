@@ -39,21 +39,21 @@ export default function ParaQuem() {
     <section
       id="para-quem"
       ref={sectionRef}
-      className="relative py-12 sm:py-20 md:py-32 bg-gradient-to-b from-[#060f22] to-[#0a1a38] overflow-hidden"
+      className="relative py-16 sm:py-20 md:py-32 bg-gradient-to-b from-[#060f22] to-[#0a1a38] overflow-hidden"
     >
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#F7931E]/20 to-transparent" />
       <div className="hidden sm:block absolute bottom-0 left-0 w-64 md:w-96 h-64 md:h-96 bg-[#F7931E]/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="anim opacity-0 translate-y-8 transition-all duration-700 text-center mb-8 sm:mb-12">
-          <span className="inline-block px-3 sm:px-4 py-1.5 rounded-full bg-[#F7931E]/10 border border-[#F7931E]/30 text-[#F7931E] text-xs sm:text-sm font-medium tracking-wide uppercase mb-4">
+        <div className="anim opacity-0 translate-y-8 transition-all duration-700 text-center mb-10 sm:mb-12">
+          <span className="inline-block px-3 sm:px-4 py-1.5 rounded-full bg-[#F7931E]/10 border border-[#F7931E]/30 text-[#F7931E] text-xs sm:text-sm font-medium tracking-wide uppercase mb-5">
             Para Quem É
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
             Esta comunidade é para <span className="text-gradient-gold">si.</span>
           </h2>
-          <p className="text-white/60 text-sm sm:text-lg max-w-xs sm:max-w-2xl mx-auto">
+          <p className="text-white/60 text-sm sm:text-lg max-w-[280px] sm:max-w-2xl mx-auto leading-relaxed">
             <span className="sm:hidden">O ambiente certo para quem recusa a estagnação e quer crescer.</span>
             <span className="hidden sm:inline">O Fellowship Code V é o ambiente desenhado para quem recusa a estagnação. Se acredita que o seu crescimento exige a comunidade certa, este é o seu lugar.</span>
           </p>
@@ -67,12 +67,12 @@ export default function ParaQuem() {
               className="anim opacity-0 translate-y-8 transition-all duration-700"
               style={{ transitionDelay: `${i * 50}ms` }}
             >
-              <div className="group h-full p-4 sm:p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-[#F7931E]/40 hover:bg-[#F7931E]/5 transition-all duration-300 cursor-default">
-                <div className="text-2xl sm:text-3xl mb-3 sm:mb-3">{item.icon}</div>
-                <h3 className="text-white font-semibold text-xs sm:text-sm mb-2 group-hover:text-[#F7931E] transition-colors leading-snug">
+              <div className="group h-full p-5 sm:p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-[#F7931E]/40 hover:bg-[#F7931E]/5 transition-all duration-300 cursor-default flex flex-col">
+                <div className="text-3xl sm:text-3xl mb-3">{item.icon}</div>
+                <h3 className="text-white font-semibold text-xs sm:text-sm group-hover:text-[#F7931E] transition-colors leading-snug">
                   {item.title}
                 </h3>
-                <p className="text-white/50 text-[10px] sm:text-xs leading-relaxed line-clamp-2">{item.desc}</p>
+                <p className="hidden sm:block text-white/50 text-xs leading-relaxed mt-2">{item.desc}</p>
               </div>
             </div>
           ))}

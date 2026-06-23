@@ -131,7 +131,7 @@ export default function Hero() {
 
           {/* Stats — 2×2 grid on mobile, row on desktop */}
           <div
-            className="animate-on-enter opacity-0 translate-y-8 transition-all duration-700 delay-500 grid grid-cols-2 sm:flex sm:flex-wrap gap-x-6 gap-y-5 sm:gap-8 mt-6 sm:mt-10"
+            className="animate-on-enter opacity-0 translate-y-8 transition-all duration-700 delay-500 grid grid-cols-2 sm:flex sm:flex-wrap gap-x-8 gap-y-5 sm:gap-8 mt-6 sm:mt-10"
           >
             {[
               { value: "18h (PT)", label: "Todas as 5ª Feiras" },
@@ -139,9 +139,9 @@ export default function Hero() {
               { value: "400+", label: "Vidas Impactadas" },
               { value: "Global", label: "Vários Países" },
             ].map((stat) => (
-              <div key={stat.label} className="flex flex-col gap-1">
-                <span className="text-xl sm:text-2xl font-bold text-[#F7931E]">{stat.value}</span>
-                <span className="text-xs text-white/50 leading-snug">{stat.label}</span>
+              <div key={stat.label} className="flex flex-col gap-1 items-start sm:items-start">
+                <span className="text-xl sm:text-2xl font-bold text-[#F7931E] leading-none">{stat.value}</span>
+                <span className="text-[11px] text-white/50 leading-snug tracking-wide">{stat.label}</span>
               </div>
             ))}
           </div>

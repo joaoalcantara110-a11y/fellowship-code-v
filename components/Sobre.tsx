@@ -32,7 +32,7 @@ export default function Sobre() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-10 sm:gap-16 items-center">
           {/* Left: Image — order-2 on mobile so text comes first */}
-          <div className="anim opacity-0 translate-y-8 transition-all duration-700 relative order-2 lg:order-1">
+          <div className="anim opacity-0 translate-y-8 transition-all duration-700 relative order-2 lg:order-1 mt-4 sm:mt-0">
             <div className="relative rounded-2xl overflow-hidden aspect-[4/5] max-w-sm mx-auto lg:max-w-none">
               <Image
                 src="/images/mentor1.webp"
@@ -44,7 +44,7 @@ export default function Sobre() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#060f22]/60 to-transparent" />
             </div>
             {/* Floating card — repositioned for mobile */}
-            <div className="absolute -bottom-2 sm:-bottom-6 right-0 sm:-right-4 lg:-right-6 glass rounded-2xl p-3 sm:p-5 w-[calc(100%-1rem)] sm:max-w-xs shadow-2xl border border-[#F7931E]/20 mx-2 sm:mx-0">
+            <div className="absolute -bottom-2 sm:-bottom-6 right-0 sm:-right-4 lg:-right-6 glass rounded-2xl p-3 sm:p-5 w-[calc(100%-1.5rem)] sm:max-w-xs shadow-2xl border border-[#F7931E]/20 mx-3 sm:mx-0">
               <div className="flex items-center gap-3 mb-2">
                 <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#F7931E]/20 flex items-center justify-center flex-shrink-0">
                   <svg className="w-4 h-4 sm:w-5 sm:h-5 text-[#F7931E]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
