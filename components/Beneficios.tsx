@@ -39,7 +39,7 @@ export default function Beneficios() {
     <section
       id="beneficios"
       ref={sectionRef}
-      className="relative py-16 sm:py-20 md:py-32 bg-[#060f22] overflow-hidden"
+      className="relative hidden sm:block sm:py-20 md:py-32 bg-[#060f22] overflow-hidden"
     >
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#F7931E]/20 to-transparent" />
       <div className="hidden sm:block absolute bottom-0 right-0 w-64 md:w-96 h-64 md:h-96 bg-[#1e3a6e]/20 rounded-full blur-3xl pointer-events-none" />

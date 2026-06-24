@@ -1,5 +1,4 @@
 import Navbar from "@/components/Navbar";
-import MobileLanding from "@/components/MobileLanding";
 import Hero from "@/components/Hero";
 import Sobre from "@/components/Sobre";
 import ParaQuem from "@/components/ParaQuem";
@@ -19,26 +18,19 @@ export default function Home() {
   return (
     <main className="relative">
       <Navbar />
-      {/* Mobile: complete Claude Designer implementation */}
-      <div className="sm:hidden">
-        <MobileLanding />
-      </div>
-      {/* Desktop: existing components */}
-      <div className="hidden sm:block">
-        <Hero />
-        <Sobre />
-        <ParaQuem />
-        <Timeline />
-        <ComoFunciona />
-        <Beneficios />
-        <Mentores />
-        <Galeria />
-        <Testemunhos />
-        <FrasesImpacto />
-        <PorqueDiferente />
-        <CTAFinal />
-        <Footer />
-      </div>
+      <Hero />
+      <Sobre />
+      <ParaQuem />
+      <Timeline />
+      <ComoFunciona />
+      <Beneficios />
+      <Mentores />
+      <Galeria />
+      <Testemunhos />
+      <FrasesImpacto />
+      <PorqueDiferente />
+      <CTAFinal />
+      <Footer />
       <WhatsAppFloat />
     </main>
   );

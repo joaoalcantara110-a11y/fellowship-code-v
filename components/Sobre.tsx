@@ -43,6 +43,7 @@ export default function Sobre() {
                 style={{ objectPosition: 'center 25%' }}
                 sizes="100vw"
               />
+              <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg,transparent 55%,rgba(10,23,48,0.85))' }} />
             </div>
             <div style={{ padding: '22px 20px 24px', background: 'linear-gradient(180deg,#0b1b39,#0a1730)' }}>
               <div style={{ fontSize: '11.5px', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#e3c25b' }}>
@@ -130,7 +131,7 @@ export default function Sobre() {
               ].map((item) => (
                 <div
                   key={item.label}
-                  className="flex items-center gap-2 sm:gap-3 p-2.5 sm:p-3 rounded-xl bg-white/5 border border-white/10"
+                  className="flex items-center gap-2 sm:gap-3 p-3 rounded-xl bg-white/5 border border-white/10"
                 >
                   <span className="text-[#F7931E] text-base sm:text-lg flex-shrink-0">{item.icon}</span>
                   <span className="text-white/80 text-xs sm:text-sm font-medium leading-tight">{item.label}</span>

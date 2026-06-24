@@ -35,7 +35,7 @@ export default function FrasesImpacto() {
   return (
     <section
       ref={sectionRef}
-      className="relative py-16 sm:py-24 md:py-32 bg-gradient-to-b from-[#060f22] to-[#0a1a38] overflow-hidden"
+      className="relative hidden sm:block sm:py-24 md:py-32 bg-gradient-to-b from-[#060f22] to-[#0a1a38] overflow-hidden"
     >
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#F7931E]/20 to-transparent" />
 

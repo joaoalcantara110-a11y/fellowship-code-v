@@ -36,7 +36,7 @@ export default function ComoFunciona() {
     <section
       id="como-funciona"
       ref={sectionRef}
-      className="relative py-12 sm:py-20 md:py-32 bg-gradient-to-b from-[#0a1a38] to-[#060f22] overflow-hidden"
+      className="relative py-16 sm:py-20 md:py-32 bg-gradient-to-b from-[#0a1a38] to-[#060f22] overflow-hidden"
     >
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#F7931E]/20 to-transparent" />
       <div className="hidden sm:block absolute top-0 right-0 w-64 md:w-80 h-64 md:h-80 bg-[#F7931E]/5 rounded-full blur-3xl pointer-events-none" />
@@ -65,7 +65,7 @@ export default function ComoFunciona() {
             <div
               key={s.label}
               className="text-center rounded-[14px]"
-              style={{ padding: '14px 8px', background: 'rgba(201,162,39,0.08)', border: '1px solid rgba(201,162,39,0.2)' }}
+              style={{ padding: '16px 10px', background: 'rgba(201,162,39,0.08)', border: '1px solid rgba(201,162,39,0.2)' }}
             >
               <div style={{ fontFamily: 'var(--font-cormorant)', fontSize: '24px', fontWeight: 700, color: '#e3c25b', lineHeight: 1 }}>{s.big}</div>
               <div className="mt-[5px] text-[12px] font-bold text-white">{s.label}</div>
