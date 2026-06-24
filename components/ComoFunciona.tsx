@@ -103,7 +103,7 @@ export default function ComoFunciona() {
           {features.map((feature, i) => (
             <div
               key={feature.title}
-              className="anim opacity-0 translate-y-8 transition-all duration-700"
+              className={`anim opacity-0 translate-y-8 transition-all duration-700 ${i >= 6 ? 'hidden sm:block' : ''}`}
               style={{ transitionDelay: `${(i + 2) * 60}ms` }}
             >
               <div className="group p-4 sm:p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#F7931E]/40 hover:bg-[#F7931E]/5 transition-all duration-300 flex items-start gap-3 sm:flex-col sm:items-start sm:gap-0">

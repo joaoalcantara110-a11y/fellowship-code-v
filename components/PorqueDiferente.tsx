@@ -63,7 +63,7 @@ export default function PorqueDiferente() {
     <section
       id="diferente"
       ref={sectionRef}
-      className="relative py-16 sm:py-20 md:py-32 bg-[#0a1a38] overflow-hidden"
+      className="relative hidden sm:block sm:py-20 md:py-32 bg-[#0a1a38] overflow-hidden"
     >
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#F7931E]/20 to-transparent" />
       <div className="hidden sm:block absolute bottom-0 left-1/2 -translate-x-1/2 w-[400px] md:w-[800px] h-[200px] md:h-[400px] bg-[#F7931E]/3 rounded-full blur-3xl pointer-events-none" />

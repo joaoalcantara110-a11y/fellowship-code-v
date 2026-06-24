@@ -63,7 +63,7 @@ export default function Beneficios() {
           {benefits.map((benefit, i) => (
             <div
               key={benefit.title}
-              className="anim opacity-0 translate-y-8 transition-all duration-700"
+              className={`anim opacity-0 translate-y-8 transition-all duration-700 ${i >= 6 ? 'hidden sm:block' : ''}`}
               style={{ transitionDelay: `${i * 50}ms` }}
             >
               <div

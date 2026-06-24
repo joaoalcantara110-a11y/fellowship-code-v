@@ -51,14 +51,14 @@ export default function Mentores() {
               img: '/images/mentor3.webp',
               name: 'Dr. Venceslau Andrade',
               role: 'Mentor Internacional',
-              bio: 'Mentor Internacional, Líder, Empresário e Fundador da CODE V Leadership School. A sua abordagem única combina princípios espirituais sólidos com estratégias práticas de desenvolvimento humano, criando um ambiente de transformação genuína. A sua missão é formar líderes que sejam uma resposta para esta geração.',
+              bio: 'Fundador da CODE V Leadership School. Combina princípios espirituais sólidos com estratégias práticas de desenvolvimento humano. A sua missão é formar líderes que sejam uma resposta para esta geração.',
               tags: ['Liderança', 'Propósito', 'Empreendedorismo'],
             },
             {
               img: '/images/mentor4.webp',
               name: 'Prof. Vaumara Andrade',
               role: 'Mentora & Educadora',
-              bio: 'Mentora, Educadora, Palestrante e Líder. Dedica-se ao desenvolvimento humano, fortalecimento da identidade, crescimento emocional e formação de pessoas com propósito. A sua presença no Fellowship traz profundidade, cuidado e perspetiva única ao processo de crescimento de cada participante.',
+              bio: 'Educadora e Mentora dedicada ao desenvolvimento humano, fortalecimento da identidade e formação de pessoas com propósito. A sua presença no Fellowship traz profundidade e perspetiva única a cada participante.',
               tags: ['Desenvolvimento Humano', 'Identidade', 'Educação'],
             },
           ].map((m, i) => (
