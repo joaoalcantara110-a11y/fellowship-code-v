@@ -145,7 +145,7 @@ export default function Testemunhos() {
 
         {/* Mobile: stacked cards (Designer-faithful) */}
         <div className="sm:hidden flex flex-col gap-[13px] mb-8">
-          {[testimonials[0], testimonials[1], testimonials[4]].map((t, i) => (
+          {[testimonials[0], testimonials[1], testimonials[4], testimonials[6]].map((t, i) => (
             <div
               key={i}
               className="anim opacity-0 translate-y-8 transition-all duration-700 rounded-[18px] p-5 border"

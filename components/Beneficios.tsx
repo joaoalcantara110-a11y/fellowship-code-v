@@ -63,21 +63,25 @@ export default function Beneficios() {
           {benefits.map((benefit, i) => (
             <div
               key={benefit.title}
-              className={`anim opacity-0 translate-y-8 transition-all duration-700 ${i >= 6 ? 'hidden sm:block' : ''}`}
+              className="anim opacity-0 translate-y-8 transition-all duration-700"
               style={{ transitionDelay: `${i * 50}ms` }}
             >
-              <div className="group h-full p-4 sm:p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-[#F7931E]/40 hover:bg-gradient-to-br hover:from-[#F7931E]/10 hover:to-transparent transition-all duration-300 flex items-start gap-3">
-                {/* Circular check chip: 26×26 on mobile, 20×20 on sm+ */}
-                <div className="flex-shrink-0 w-[26px] h-[26px] sm:w-5 sm:h-5 rounded-full bg-[#F7931E] flex items-center justify-center mt-0.5">
-                  <svg className="w-3.5 h-3.5 sm:w-3 sm:h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                  </svg>
+              <div
+                className="group h-full flex items-start gap-[13px] sm:p-5 sm:rounded-2xl sm:bg-white/5 sm:border sm:border-white/10 sm:hover:border-[#F7931E]/40 sm:hover:bg-gradient-to-br sm:hover:from-[#F7931E]/10 sm:hover:to-transparent transition-all duration-300"
+                style={{ padding: '16px', borderRadius: '15px', background: 'rgba(255,255,255,0.035)', border: '1px solid rgba(255,255,255,0.07)' }}
+              >
+                {/* Gold circle chip with ✦ */}
+                <div
+                  className="flex-shrink-0 flex items-center justify-center font-extrabold mt-[1px]"
+                  style={{ width: '26px', height: '26px', borderRadius: '50%', fontSize: '13px', color: '#060f22', background: 'linear-gradient(135deg,#e3c25b,#c9a227)', flexShrink: 0 }}
+                >
+                  ✦
                 </div>
                 <div className="flex-1 min-w-0">
-                  <h3 className="text-white font-bold text-[15px] sm:text-sm group-hover:text-[#F7931E] transition-colors leading-snug mb-1">
+                  <h3 className="text-white font-bold text-[15px] sm:text-sm group-hover:text-[#F7931E] transition-colors leading-snug mb-0" style={{ marginTop: '1px' }}>
                     {benefit.title}
                   </h3>
-                  <p className="text-white/60 sm:text-white/40 text-[13px] sm:text-xs leading-relaxed sm:mt-0">{benefit.desc}</p>
+                  <p className="text-[13px] leading-[1.5] mt-1" style={{ color: '#a3b2cc' }}>{benefit.desc}</p>
                 </div>
               </div>
             </div>

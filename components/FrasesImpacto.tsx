@@ -73,7 +73,7 @@ export default function FrasesImpacto() {
 
         {/* Mobile: Designer-style gold quote cards */}
         <div className="sm:hidden anim opacity-0 translate-y-8 transition-all duration-700 delay-200 flex flex-col gap-3">
-          {frases.slice(0, 4).map((frase, i) => (
+          {frases.slice(0, 5).map((frase, i) => (
             <div
               key={i}
               className="flex gap-[14px] items-start rounded-[18px] p-[22px_20px]"

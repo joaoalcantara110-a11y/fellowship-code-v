@@ -34,7 +34,7 @@ export default function Sobre() {
         {/* Mobile-only: Comunidade Internacional card (Designer section 4.3) */}
         <div className="sm:hidden mb-8 anim opacity-0 translate-y-8 transition-all duration-700">
           <div className="overflow-hidden" style={{ borderRadius: '22px', border: '1px solid rgba(201,162,39,0.2)' }}>
-            <div className="relative" style={{ height: '165px' }}>
+            <div className="relative" style={{ height: '220px' }}>
               <Image
                 src="/images/mentor1.webp"
                 alt="Comunidade Internacional"
@@ -114,14 +114,14 @@ export default function Sobre() {
                 <span className="text-[#F7931E] font-semibold">Prof. Vaumara Andrade</span> e uma
                 comunidade de pessoas com visão.
               </p>
-              <p className="hidden sm:block text-white/80 text-base sm:text-lg leading-relaxed font-medium">
+              <p className="text-white/80 text-[15px] sm:text-lg leading-relaxed font-medium">
                 Aqui não procuramos apenas motivação.{" "}
                 <span className="text-white">Construímos transformação, resultados e legado.</span>
               </p>
             </div>
 
             {/* Values */}
-            <div className="anim opacity-0 translate-y-8 transition-all duration-700 delay-300 hidden sm:grid grid-cols-2 gap-3 sm:gap-4 pt-2 sm:pt-4">
+            <div className="anim opacity-0 translate-y-8 transition-all duration-700 delay-300 grid grid-cols-2 gap-[11px] sm:gap-4 pt-2 sm:pt-4">
               {[
                 { icon: "✦", label: "Fé em Comunidade" },
                 { icon: "✦", label: "Identidade Fortalecida" },

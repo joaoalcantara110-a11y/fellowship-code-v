@@ -84,8 +84,8 @@ export default function Timeline() {
             O que acontece em{" "}
             <span className="text-gradient-gold">cada encontro.</span>
           </h2>
-          <p className="hidden sm:block text-white/60 text-base sm:text-lg max-w-xl mx-auto">
-            Cada sessão é cuidadosamente estruturada para maximizar o crescimento e o impacto na sua vida.
+          <p className="text-white/60 text-[15px] sm:text-lg max-w-xl mx-auto" style={{ lineHeight: 1.65 }}>
+            Cada sessão é estruturada para maximizar o crescimento e o impacto na sua vida.
           </p>
         </div>
 
@@ -120,13 +120,13 @@ export default function Timeline() {
                 )}
               </div>
               {/* Content card */}
-              <div className={`flex-1 ${i < steps.length - 1 ? "mb-7" : ""}`}>
+              <div className={`flex-1 ${i < steps.length - 1 ? "mb-4" : ""}`}>
                 <div
-                  className="rounded-2xl p-5 border"
-                  style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.09)' }}
+                  className="rounded-2xl border"
+                  style={{ padding: '16px 17px', background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.09)' }}
                 >
-                  <h4 className="text-white font-bold text-[15px] mb-2">{step.title}</h4>
-                  <p className="text-[13px] leading-[1.6]" style={{ color: '#a9b8d2' }}>{step.desc}</p>
+                  <h4 className="text-white font-bold text-[16px] mb-0">{step.title}</h4>
+                  <p className="text-[13.5px] leading-[1.55] mt-[6px]" style={{ color: '#a9b8d2' }}>{step.desc}</p>
                 </div>
               </div>
             </div>

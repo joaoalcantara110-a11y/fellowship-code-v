@@ -64,7 +64,7 @@ export default function ParaQuem() {
           {audience.map((item, i) => (
             <div
               key={item.title}
-              className={`anim opacity-0 translate-y-8 transition-all duration-700 ${i >= 6 ? 'hidden sm:block' : ''}`}
+              className="anim opacity-0 translate-y-8 transition-all duration-700"
               style={{ transitionDelay: `${i * 50}ms` }}
             >
               <div className="group p-4 sm:p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-[#F7931E]/40 hover:bg-[#F7931E]/5 transition-all duration-300 cursor-default flex items-start gap-[14px] sm:flex-col sm:items-start sm:gap-0">

@@ -97,7 +97,7 @@ export default function Mentores() {
               </div>
               {/* Bio + tags */}
               <div className="p-5">
-                <p className="line-clamp-3 sm:line-clamp-none" style={{ fontSize: '14px', lineHeight: '1.6', color: '#b6c3da' }}>{m.bio}</p>
+                <p style={{ fontSize: '14px', lineHeight: '1.6', color: '#b6c3da' }}>{m.bio}</p>
                 <div className="flex flex-wrap gap-2 mt-4">
                   {m.tags.map(tag => (
                     <span

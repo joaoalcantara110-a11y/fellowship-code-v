@@ -55,25 +55,44 @@ export default function ComoFunciona() {
           </p>
         </div>
 
-        {/* Main feature card */}
-        <div className="anim opacity-0 translate-y-8 transition-all duration-700 delay-100 mb-8 sm:mb-12">
-          <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden bg-gradient-to-br from-[#1e3a6e]/50 to-[#122752]/50 border border-[#F7931E]/20 p-5 sm:p-8 md:p-10">
-            <div className="absolute top-0 right-0 w-48 md:w-64 h-48 md:h-64 bg-[#F7931E]/10 rounded-full blur-3xl" />
-            <div className="relative z-10 grid grid-cols-3 gap-4 sm:gap-8 text-center">
+        {/* Mobile stats: 3 células douradas (referência Designer) */}
+        <div className="sm:hidden anim opacity-0 translate-y-8 transition-all duration-700 delay-100 grid grid-cols-3 gap-[9px] mt-6 mb-[14px]">
+          {[
+            { big: '18h', label: 'Portugal', sub: '5ª feiras' },
+            { big: '90',  label: 'Minutos',  sub: 'Por sessão' },
+            { big: '∞',   label: 'Crescimento', sub: 'Contínuo' },
+          ].map((s) => (
+            <div
+              key={s.label}
+              className="text-center rounded-[14px]"
+              style={{ padding: '14px 8px', background: 'rgba(201,162,39,0.08)', border: '1px solid rgba(201,162,39,0.2)' }}
+            >
+              <div style={{ fontFamily: 'var(--font-cormorant)', fontSize: '24px', fontWeight: 700, color: '#e3c25b', lineHeight: 1 }}>{s.big}</div>
+              <div className="mt-[5px] text-[12px] font-bold text-white">{s.label}</div>
+              <div className="text-[11px]" style={{ color: '#8da0bd' }}>{s.sub}</div>
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop stats: big gradient card */}
+        <div className="hidden sm:block anim opacity-0 translate-y-8 transition-all duration-700 delay-100 mb-12">
+          <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#1e3a6e]/50 to-[#122752]/50 border border-[#F7931E]/20 p-8 md:p-10">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#F7931E]/10 rounded-full blur-3xl" />
+            <div className="relative z-10 grid grid-cols-3 gap-8 text-center">
               <div className="flex flex-col items-center">
-                <div className="text-3xl sm:text-3xl md:text-4xl font-bold text-[#F7931E] mb-2 sm:mb-2">18h</div>
-                <div className="text-white font-semibold text-xs sm:text-base">Portugal</div>
-                <div className="text-white/50 text-[10px] sm:text-sm mt-1 sm:mt-1 leading-snug">Todas as 5ª feiras</div>
+                <div className="text-3xl md:text-4xl font-bold text-[#F7931E] mb-2">18h</div>
+                <div className="text-white font-semibold text-base">Portugal</div>
+                <div className="text-white/50 text-sm mt-1 leading-snug">Todas as 5ª feiras</div>
               </div>
               <div className="border-x border-white/10 flex flex-col items-center">
-                <div className="text-3xl sm:text-3xl md:text-4xl font-bold text-[#F7931E] mb-2 sm:mb-2">90</div>
-                <div className="text-white font-semibold text-xs sm:text-base">Minutos</div>
-                <div className="text-white/50 text-[10px] sm:text-sm mt-1 sm:mt-1 leading-snug">Por sessão</div>
+                <div className="text-3xl md:text-4xl font-bold text-[#F7931E] mb-2">90</div>
+                <div className="text-white font-semibold text-base">Minutos</div>
+                <div className="text-white/50 text-sm mt-1 leading-snug">Por sessão</div>
               </div>
               <div className="flex flex-col items-center">
-                <div className="text-3xl sm:text-3xl md:text-4xl font-bold text-[#F7931E] mb-2 sm:mb-2">∞</div>
-                <div className="text-white font-semibold text-xs sm:text-base">Crescimento</div>
-                <div className="text-white/50 text-[10px] sm:text-sm mt-1 sm:mt-1 leading-snug">Contínuo</div>
+                <div className="text-3xl md:text-4xl font-bold text-[#F7931E] mb-2">∞</div>
+                <div className="text-white font-semibold text-base">Crescimento</div>
+                <div className="text-white/50 text-sm mt-1 leading-snug">Contínuo</div>
               </div>
             </div>
           </div>
@@ -84,7 +103,7 @@ export default function ComoFunciona() {
           {features.map((feature, i) => (
             <div
               key={feature.title}
-              className={`anim opacity-0 translate-y-8 transition-all duration-700 ${i >= 5 ? 'hidden sm:block' : ''}`}
+              className="anim opacity-0 translate-y-8 transition-all duration-700"
               style={{ transitionDelay: `${(i + 2) * 60}ms` }}
             >
               <div className="group p-4 sm:p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#F7931E]/40 hover:bg-[#F7931E]/5 transition-all duration-300 flex items-start gap-3 sm:flex-col sm:items-start sm:gap-0">
