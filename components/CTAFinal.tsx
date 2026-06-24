@@ -85,7 +85,7 @@ export default function CTAFinal() {
         </div>
 
         {/* Trust indicators */}
-        <div className="anim opacity-0 translate-y-8 transition-all duration-700 delay-400 flex flex-wrap justify-center gap-2 sm:gap-4 mt-6 sm:mt-8">
+        <div className="anim opacity-0 translate-y-8 transition-all duration-700 delay-400 flex flex-col sm:flex-row sm:flex-wrap justify-center items-center gap-2.5 sm:gap-4 mt-6 sm:mt-8">
           {[
             { icon: "🔒", text: "Grupo Oficial Verificado" },
             { icon: "✓", text: "Transmissão Privada" },

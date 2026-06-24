@@ -59,20 +59,25 @@ export default function ParaQuem() {
           </p>
         </div>
 
-        {/* Cards Grid — 2 cols on mobile, 3 on tablet, 5 on desktop */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-5 gap-3 sm:gap-4">
+        {/* Cards Grid — 1 col on mobile, 2 on sm, 3 on md, 5 on xl */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-5 gap-3 sm:gap-4">
           {audience.map((item, i) => (
             <div
               key={item.title}
               className="anim opacity-0 translate-y-8 transition-all duration-700"
               style={{ transitionDelay: `${i * 50}ms` }}
             >
-              <div className="group h-full p-5 sm:p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-[#F7931E]/40 hover:bg-[#F7931E]/5 transition-all duration-300 cursor-default flex flex-col">
-                <div className="text-3xl sm:text-3xl mb-3">{item.icon}</div>
-                <h3 className="text-white font-semibold text-xs sm:text-sm group-hover:text-[#F7931E] transition-colors leading-snug">
-                  {item.title}
-                </h3>
-                <p className="hidden sm:block text-white/50 text-xs leading-relaxed mt-2">{item.desc}</p>
+              <div className="group p-4 sm:p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-[#F7931E]/40 hover:bg-[#F7931E]/5 transition-all duration-300 cursor-default flex items-start gap-[14px] sm:flex-col sm:items-start sm:gap-0">
+                {/* Mobile: 46×46 gold chip; sm+: plain emoji above */}
+                <div className="flex-shrink-0 w-[46px] h-[46px] rounded-[13px] bg-[#F7931E]/10 border border-[#F7931E]/20 flex items-center justify-center text-[22px] leading-none sm:w-auto sm:h-auto sm:rounded-none sm:bg-transparent sm:border-0 sm:text-3xl sm:mb-3">
+                  {item.icon}
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-white font-bold text-[15px] sm:text-sm group-hover:text-[#F7931E] transition-colors leading-snug mb-1 sm:mb-0">
+                    {item.title}
+                  </h3>
+                  <p className="text-white/60 sm:text-white/50 text-[13px] sm:text-xs leading-relaxed sm:mt-2">{item.desc}</p>
+                </div>
               </div>
             </div>
           ))}

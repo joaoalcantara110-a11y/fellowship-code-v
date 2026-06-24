@@ -57,7 +57,7 @@ export default function ComoFunciona() {
 
         {/* Main feature card */}
         <div className="anim opacity-0 translate-y-8 transition-all duration-700 delay-100 mb-8 sm:mb-12">
-          <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden bg-gradient-to-br from-[#1e3a6e]/50 to-[#122752]/50 border border-[#F7931E]/20 p-6 sm:p-8 md:p-10">
+          <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden bg-gradient-to-br from-[#1e3a6e]/50 to-[#122752]/50 border border-[#F7931E]/20 p-7 sm:p-8 md:p-10">
             <div className="absolute top-0 right-0 w-48 md:w-64 h-48 md:h-64 bg-[#F7931E]/10 rounded-full blur-3xl" />
             <div className="relative z-10 grid grid-cols-3 gap-4 sm:gap-8 text-center">
               <div className="flex flex-col items-center">
@@ -79,20 +79,25 @@ export default function ComoFunciona() {
           </div>
         </div>
 
-        {/* Features grid — 2 cols on mobile, 2 on sm, 4 on lg */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
+        {/* Features grid — 1 col on mobile, 2 on sm, 4 on lg */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
           {features.map((feature, i) => (
             <div
               key={feature.title}
               className="anim opacity-0 translate-y-8 transition-all duration-700"
               style={{ transitionDelay: `${(i + 2) * 60}ms` }}
             >
-              <div className="group h-full p-5 sm:p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#F7931E]/40 hover:bg-[#F7931E]/5 transition-all duration-300 flex flex-col">
-                <div className="text-3xl sm:text-3xl mb-3 sm:mb-4">{feature.icon}</div>
-                <h3 className="text-white font-semibold text-xs sm:text-sm group-hover:text-[#F7931E] transition-colors leading-snug">
-                  {feature.title}
-                </h3>
-                <p className="hidden sm:block text-white/50 text-xs leading-relaxed mt-2">{feature.desc}</p>
+              <div className="group p-4 sm:p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#F7931E]/40 hover:bg-[#F7931E]/5 transition-all duration-300 flex items-start gap-3 sm:flex-col sm:items-start sm:gap-0">
+                {/* Mobile: 44×44 chip; sm+: plain emoji above */}
+                <div className="flex-shrink-0 w-11 h-11 rounded-[11px] bg-[#F7931E]/10 border border-[#F7931E]/20 flex items-center justify-center text-lg leading-none sm:w-auto sm:h-auto sm:rounded-none sm:bg-transparent sm:border-0 sm:text-3xl sm:mb-4">
+                  {feature.icon}
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-white font-semibold text-sm group-hover:text-[#F7931E] transition-colors leading-snug mb-1 sm:mb-0">
+                    {feature.title}
+                  </h3>
+                  <p className="text-white/60 sm:text-white/50 text-[13px] sm:text-xs leading-relaxed sm:mt-2">{feature.desc}</p>
+                </div>
               </div>
             </div>
           ))}

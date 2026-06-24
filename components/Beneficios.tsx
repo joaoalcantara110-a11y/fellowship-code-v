@@ -58,27 +58,26 @@ export default function Beneficios() {
           </p>
         </div>
 
-        {/* Benefits grid — 2 col on mobile, 2 on tablet, 3 on desktop, 5 on xl */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3 sm:gap-4">
+        {/* Benefits grid — 1 col on mobile, 2 on sm, 3 on lg, 5 on xl */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3 sm:gap-4">
           {benefits.map((benefit, i) => (
             <div
               key={benefit.title}
               className="anim opacity-0 translate-y-8 transition-all duration-700"
               style={{ transitionDelay: `${i * 50}ms` }}
             >
-              <div className="group h-full p-4 sm:p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-[#F7931E]/40 hover:bg-gradient-to-br hover:from-[#F7931E]/10 hover:to-transparent transition-all duration-300 flex flex-col">
-                <div className="flex items-start gap-3">
-                  <div className="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-[#F7931E] flex items-center justify-center">
-                    <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-white font-semibold text-xs sm:text-sm group-hover:text-[#F7931E] transition-colors leading-snug">
-                      {benefit.title}
-                    </h3>
-                    <p className="hidden sm:block text-white/40 text-xs leading-relaxed mt-1.5">{benefit.desc}</p>
-                  </div>
+              <div className="group h-full p-4 sm:p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-[#F7931E]/40 hover:bg-gradient-to-br hover:from-[#F7931E]/10 hover:to-transparent transition-all duration-300 flex items-start gap-3">
+                {/* Circular check chip: 26×26 on mobile, 20×20 on sm+ */}
+                <div className="flex-shrink-0 w-[26px] h-[26px] sm:w-5 sm:h-5 rounded-full bg-[#F7931E] flex items-center justify-center mt-0.5">
+                  <svg className="w-3.5 h-3.5 sm:w-3 sm:h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-white font-bold text-[15px] sm:text-sm group-hover:text-[#F7931E] transition-colors leading-snug mb-1">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-white/60 sm:text-white/40 text-[13px] sm:text-xs leading-relaxed sm:mt-0">{benefit.desc}</p>
                 </div>
               </div>
             </div>

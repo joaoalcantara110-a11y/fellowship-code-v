@@ -9,7 +9,7 @@ export default function Footer() {
     <footer className="relative bg-[#040c1e] border-t border-white/5 overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#F7931E]/20 to-transparent" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 pb-24 sm:pb-16 sm:py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 pb-[130px] sm:pb-16 sm:py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-12 items-start">
 
           {/* Logo & Description */}

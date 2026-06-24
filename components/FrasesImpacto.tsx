@@ -76,7 +76,7 @@ export default function FrasesImpacto() {
           {frases.map((frase, i) => (
             <div
               key={i}
-              className={`group p-6 sm:p-8 rounded-2xl border transition-all duration-300 ${
+              className={`group p-7 sm:p-8 rounded-2xl border transition-all duration-300 ${
                 i === 0
                   ? "bg-gradient-to-br from-[#F7931E]/15 to-[#F7931E]/5 border-[#F7931E]/30"
                   : "bg-white/5 border-white/10 hover:border-[#F7931E]/30 hover:bg-[#F7931E]/5"

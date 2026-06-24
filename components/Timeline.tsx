@@ -89,61 +89,63 @@ export default function Timeline() {
           </p>
         </div>
 
-        {/* Mobile: vertical stack with left line | Desktop: alternating */}
-        <div className="relative">
-          {/* Vertical line — desktop only */}
-          <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-[#F7931E]/50 via-[#F7931E]/20 to-transparent hidden lg:block" />
+        {/* ─── MOBILE TIMELINE ─────────────────────────────── */}
+        <div className="lg:hidden">
+          {steps.map((step, i) => (
+            <div
+              key={step.number}
+              className="anim opacity-0 translate-y-8 transition-all duration-700 flex"
+              style={{ transitionDelay: `${i * 100}ms` }}
+            >
+              {/* Icon column + connecting line below */}
+              <div className="flex flex-col items-center flex-shrink-0 w-[46px] mr-4">
+                <div className="w-[46px] h-[46px] rounded-full bg-[#F7931E]/20 border border-[#F7931E]/30 flex items-center justify-center text-[#F7931E]">
+                  {step.icon}
+                </div>
+                {i < steps.length - 1 && (
+                  <div className="w-0.5 flex-1 bg-gradient-to-b from-[#F7931E]/30 to-transparent mt-2" />
+                )}
+              </div>
+              {/* Content card */}
+              <div className={`flex-1 ${i < steps.length - 1 ? "mb-6" : ""}`}>
+                <div className="glass rounded-2xl p-5 border border-white/10 hover:border-[#F7931E]/30 transition-all duration-300">
+                  <span className="text-[#F7931E] font-bold text-xs tracking-widest block mb-2">{step.number}</span>
+                  <h3 className="text-white font-bold text-base mb-2">{step.title}</h3>
+                  <p className="text-white/60 text-sm leading-relaxed">{step.desc}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
 
-          {/* Mobile vertical line */}
-          <div className="absolute left-5 top-0 bottom-0 w-px bg-gradient-to-b from-[#F7931E]/40 via-[#F7931E]/20 to-transparent lg:hidden" />
-
-          <div className="space-y-6 sm:space-y-8 lg:space-y-0">
+        {/* ─── DESKTOP TIMELINE ────────────────────────────── */}
+        <div className="hidden lg:block relative">
+          <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-[#F7931E]/50 via-[#F7931E]/20 to-transparent" />
+          <div>
             {steps.map((step, i) => (
               <div
                 key={step.number}
-                className={`anim opacity-0 translate-y-8 transition-all duration-700 
-                  /* Mobile: left-aligned with icon on left */
-                  flex gap-4 pl-0
-                  /* Desktop: alternating */
-                  lg:flex lg:items-center lg:gap-12 lg:pl-0 ${
-                  i % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
-                }`}
+                className={`anim opacity-0 translate-y-8 transition-all duration-700 flex items-center gap-12 ${
+                  i < steps.length - 1 ? "mb-16" : ""
+                } ${i % 2 === 0 ? "flex-row" : "flex-row-reverse"}`}
                 style={{ transitionDelay: `${i * 100}ms` }}
               >
-                {/* Mobile layout wrapper */}
-                <div className="flex gap-4 w-full lg:contents">
-                  {/* Mobile dot + number */}
-                  <div className="flex flex-col items-center lg:hidden flex-shrink-0">
-                    <div className="w-10 h-10 rounded-xl bg-[#F7931E]/20 flex items-center justify-center text-[#F7931E] z-10 relative">
-                      {step.icon}
-                    </div>
-                  </div>
-
-                  {/* Content card */}
-                  <div className={`flex-1 lg:w-5/12 ${i % 2 === 0 ? "lg:text-right" : "lg:text-left"} mb-0 lg:mb-16`}>
-                    <div className="glass rounded-2xl p-5 sm:p-6 lg:p-8 border border-white/10 hover:border-[#F7931E]/30 transition-all duration-300">
-                      {/* Desktop icon row */}
-                      <div className={`hidden lg:flex items-center gap-3 mb-4 ${i % 2 === 0 ? "lg:justify-end" : "lg:justify-start"}`}>
-                        <div className="w-10 h-10 rounded-xl bg-[#F7931E]/20 flex items-center justify-center text-[#F7931E]">
-                          {step.icon}
-                        </div>
-                        <span className="text-[#F7931E] font-bold text-sm tracking-widest">{step.number}</span>
+                <div className={`w-5/12 ${i % 2 === 0 ? "text-right" : "text-left"}`}>
+                  <div className="glass rounded-2xl p-8 border border-white/10 hover:border-[#F7931E]/30 transition-all duration-300">
+                    <div className={`flex items-center gap-3 mb-4 ${i % 2 === 0 ? "justify-end" : "justify-start"}`}>
+                      <div className="w-10 h-10 rounded-xl bg-[#F7931E]/20 flex items-center justify-center text-[#F7931E]">
+                        {step.icon}
                       </div>
-                      {/* Mobile number badge */}
-                      <span className="lg:hidden text-[#F7931E] font-bold text-xs tracking-widest mb-3 block">{step.number}</span>
-                      <h3 className="text-white text-base sm:text-xl font-bold mb-2 sm:mb-3">{step.title}</h3>
-                      <p className="text-white/60 text-sm sm:text-base leading-relaxed">{step.desc}</p>
+                      <span className="text-[#F7931E] font-bold text-sm tracking-widest">{step.number}</span>
                     </div>
+                    <h3 className="text-white text-xl font-bold mb-3">{step.title}</h3>
+                    <p className="text-white/60 text-base leading-relaxed">{step.desc}</p>
                   </div>
-
-                  {/* Desktop center dot */}
-                  <div className="hidden lg:flex lg:w-2/12 justify-center">
-                    <div className="w-5 h-5 rounded-full bg-[#F7931E] border-4 border-[#0a1a38] shadow-lg shadow-[#F7931E]/30 relative z-10" />
-                  </div>
-
-                  {/* Desktop spacer */}
-                  <div className="hidden lg:block lg:w-5/12" />
                 </div>
+                <div className="w-2/12 flex justify-center">
+                  <div className="w-5 h-5 rounded-full bg-[#F7931E] border-4 border-[#0a1a38] shadow-lg shadow-[#F7931E]/30 relative z-10" />
+                </div>
+                <div className="w-5/12" />
               </div>
             ))}
           </div>
