@@ -56,92 +56,108 @@ export default function Hero() {
       <div className="hidden sm:block absolute bottom-1/4 left-1/4 w-48 md:w-64 h-48 md:h-64 bg-[#1e3a6e]/30 rounded-full blur-3xl pointer-events-none" />
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-14 pb-12 sm:pb-16">
-        <div className="max-w-3xl">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-6 lg:px-8 pt-8 sm:pt-14 pb-12 sm:pb-16">
+        <div className="max-w-3xl text-center sm:text-left">
 
           {/* Badge */}
           <div
-            className="animate-on-enter opacity-0 translate-y-8 transition-all duration-700 delay-100 inline-flex items-center gap-2 px-4 sm:px-4 py-2 sm:py-2 rounded-full bg-[#F7931E]/10 border border-[#F7931E]/30 mb-3 sm:mb-4"
+            className="animate-on-enter opacity-0 translate-y-8 transition-all duration-700 delay-100 inline-flex items-center gap-2 px-4 py-2 rounded-full mb-7 sm:mb-4"
+            style={{ background: 'rgba(201,162,39,0.14)', border: '1px solid rgba(201,162,39,0.35)' }}
           >
-            <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#F7931E] animate-pulse flex-shrink-0" />
-            <span className="text-[#F7931E] text-xs font-medium tracking-wide uppercase">
+            <span className="w-1.5 h-1.5 rounded-full animate-pulse flex-shrink-0" style={{ background: '#e3c25b', boxShadow: '0 0 8px #e3c25b' }} />
+            <span className="text-[11.5px] font-bold tracking-[0.08em] uppercase" style={{ color: '#e3c25b' }}>
               Encontros Semanais Online
             </span>
           </div>
 
-          {/* Logo — hidden on mobile (Navbar already shows it) */}
-          <div className="hidden sm:block animate-on-enter opacity-0 translate-y-8 transition-all duration-700 delay-150 mb-5 sm:mb-6">
+          {/* Logo — visible on mobile (Designer shows it centered) */}
+          <div className="animate-on-enter opacity-0 translate-y-8 transition-all duration-700 delay-150 mb-5 sm:mb-6 flex justify-center sm:justify-start">
             <Image
               src="/images/logo1.png"
               alt="Fellowship Global"
               width={280}
               height={100}
-              className="h-12 sm:h-16 md:h-20 w-auto object-contain"
+              className="h-[54px] sm:h-16 md:h-20 w-auto object-contain"
             />
           </div>
 
-          {/* Title — highest priority element */}
+          {/* Title */}
           <h1
-            className="animate-on-enter opacity-0 translate-y-8 transition-all duration-700 delay-200 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-2 sm:mb-3"
+            className="animate-on-enter opacity-0 translate-y-8 transition-all duration-700 delay-200 font-bold text-white mb-2 sm:mb-3"
+            style={{ fontSize: '44px', lineHeight: '1.02', letterSpacing: '0.01em' }}
           >
-            FELLOWSHIP{" "}
-            <span className="text-gradient-gold">CODE V</span>
+            FELLOWSHIP<br className="sm:hidden" />
+            {" "}<span className="text-gradient-gold sm:hidden">CODE V</span>
+            <span className="hidden sm:inline text-[2.25rem] sm:text-4xl md:text-5xl lg:text-6xl"> CODE V</span>
           </h1>
 
-          {/* Subtitle — hidden on mobile to reduce visual noise */}
-          <p className="hidden sm:block animate-on-enter opacity-0 translate-y-8 transition-all duration-700 delay-300 text-[#F7931E] text-sm sm:text-base md:text-lg font-medium tracking-widest uppercase mb-5 sm:mb-6 leading-relaxed">
-            Liderança · Propósito · Crescimento · Acesso Global
-          </p>
+          {/* Subtitle */}
+          <div className="animate-on-enter opacity-0 translate-y-8 transition-all duration-700 delay-300 mb-[18px] sm:mb-6">
+            <span className="text-[12.5px] sm:text-base md:text-lg font-bold tracking-[0.06em] uppercase" style={{ color: '#e3c25b' }}>
+              Liderança · Propósito · Crescimento
+            </span>
+          </div>
 
-          {/* Description — deprioritized on mobile */}
+          {/* Description */}
           <p
-            className="animate-on-enter opacity-0 translate-y-8 transition-all duration-700 delay-300 text-white/60 sm:text-white/80 text-sm sm:text-base md:text-lg leading-relaxed mb-6 sm:mb-8 max-w-xs sm:max-w-xl"
+            className="animate-on-enter opacity-0 translate-y-8 transition-all duration-700 delay-300 text-[15.5px] sm:text-base md:text-lg leading-[1.6] mb-[26px] sm:mb-8 max-w-sm sm:max-w-xl mx-auto sm:mx-0"
+            style={{ color: '#c3cfe4' }}
           >
-            <span className="text-white/90 sm:text-white font-medium">Mais de 400 vidas impactadas.</span>{" "}
+            <span className="text-white font-medium">Mais de 400 vidas impactadas.</span>{" "}
             Uma comunidade internacional de líderes onde o propósito é ativado.
           </p>
 
-          {/* CTAs — only primary on mobile */}
+          {/* CTAs — both stacked on mobile, side by side on sm+ */}
           <div
-            className="animate-on-enter opacity-0 translate-y-8 transition-all duration-700 delay-400 flex flex-col sm:flex-row gap-3 sm:gap-4"
+            className="animate-on-enter opacity-0 translate-y-8 transition-all duration-700 delay-400 flex flex-col sm:flex-row gap-[11px] sm:gap-4"
           >
             <a
               href={WHATSAPP_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-4 sm:py-4 rounded-full bg-[#F7931E] text-white font-bold text-sm sm:text-base hover:bg-[#e07010] transition-all duration-300 shadow-2xl hover:shadow-[#F7931E]/40 active:scale-95 glow-gold w-full sm:w-auto"
+              className="group inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-[17px] sm:py-4 font-extrabold text-[15px] sm:text-base active:scale-95 transition-all duration-300 w-full sm:w-auto"
+              style={{ borderRadius: '14px', color: '#060f22', background: 'linear-gradient(135deg,#e3c25b,#c9a227)', boxShadow: '0 10px 30px rgba(201,162,39,0.32)', letterSpacing: '0.02em' }}
             >
-              <svg className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-              </svg>
               GARANTIR O MEU LUGAR
             </a>
 
-            {/* Secondary CTA — hidden on mobile to reduce clutter */}
             <button
               onClick={scrollToNext}
-              className="hidden sm:inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full border border-white/20 text-white font-semibold text-sm sm:text-base hover:border-[#F7931E]/50 hover:bg-white/5 active:scale-95 transition-all duration-300 w-full sm:w-auto"
+              className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-[16px] sm:py-4 font-bold text-[15px] sm:text-base hover:bg-white/10 active:scale-95 transition-all duration-300 w-full sm:w-auto"
+              style={{ borderRadius: '14px', color: '#e8ecf4', background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.14)' }}
             >
-              QUERO SABER MAIS
-              <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
+              Quero saber mais
             </button>
           </div>
 
-          {/* Stats — 2×2 grid on mobile, row on desktop */}
+          {/* Stats — 2×2 card grid on mobile, row on desktop */}
           <div
-            className="animate-on-enter opacity-0 translate-y-8 transition-all duration-700 delay-500 grid grid-cols-2 sm:flex sm:flex-wrap gap-x-8 gap-y-5 sm:gap-8 mt-6 sm:mt-10"
+            className="animate-on-enter opacity-0 translate-y-8 transition-all duration-700 delay-500 grid grid-cols-2 sm:flex sm:flex-wrap gap-[10px] sm:gap-8 mt-6 sm:mt-10"
           >
             {[
-              { value: "18h (PT)", label: "Todas as 5ª Feiras" },
-              { value: "Online", label: "Transmissão Privada" },
-              { value: "400+", label: "Vidas Impactadas" },
-              { value: "Global", label: "Vários Países" },
+              { value: "18h", label: "PT", sub: "Todas as 5ª Feiras" },
+              { value: "Online", label: "Transmissão", sub: "Privada" },
+              { value: "400+", label: "Vidas", sub: "Impactadas" },
+              { value: "Global", label: "Vários", sub: "Países" },
             ].map((stat) => (
-              <div key={stat.label} className="flex flex-col gap-1 items-start sm:items-start">
-                <span className="text-xl sm:text-2xl font-bold text-[#F7931E] leading-none">{stat.value}</span>
-                <span className="text-[11px] text-white/50 leading-snug tracking-wide">{stat.label}</span>
+              <div
+                key={stat.label}
+                className="sm:flex sm:flex-col sm:gap-1 sm:items-start"
+              >
+                {/* Mobile: card style */}
+                <div
+                  className="sm:hidden p-[15px_14px] rounded-2xl text-left"
+                  style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)' }}
+                >
+                  <div style={{ fontFamily: 'var(--font-cormorant)', fontSize: '26px', fontWeight: 700, color: '#e3c25b', lineHeight: 1 }}>
+                    {stat.value}
+                  </div>
+                  <div className="mt-[5px] text-[12.5px] font-semibold" style={{ color: '#dbe3f2' }}>{stat.label}</div>
+                  <div className="text-[11.5px]" style={{ color: '#8da0bd' }}>{stat.sub}</div>
+                </div>
+                {/* Desktop: simple text */}
+                <span className="hidden sm:block text-xl sm:text-2xl font-bold text-[#F7931E] leading-none">{stat.value}</span>
+                <span className="hidden sm:block text-[11px] text-white/50 leading-snug tracking-wide">{stat.label}</span>
               </div>
             ))}
           </div>

@@ -44,94 +44,111 @@ export default function Mentores() {
           </h2>
         </div>
 
-        {/* Dr. Venceslau */}
-        <div className="anim opacity-0 translate-y-8 transition-all duration-700 delay-100 mb-8 sm:mb-16">
-          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
-            {/* Images — simplified for mobile */}
-            <div className="relative pb-8 sm:pb-6">
-              {/* Mobile: single featured image */}
-              <div className="block sm:hidden relative rounded-2xl overflow-hidden aspect-[3/4]">
+        {/* Mobile: Designer-style mentor cards (1-col, 280px photo overlay) */}
+        <div className="sm:hidden flex flex-col gap-5 mb-8">
+          {[
+            {
+              img: '/images/mentor3.webp',
+              name: 'Dr. Venceslau Andrade',
+              role: 'Mentor Internacional',
+              bio: 'Mentor Internacional, Líder, Empresário e Fundador da CODE V Leadership School. A sua abordagem única combina princípios espirituais sólidos com estratégias práticas de desenvolvimento humano, criando um ambiente de transformação genuína. A sua missão é formar líderes que sejam uma resposta para esta geração.',
+              tags: ['Liderança', 'Propósito', 'Empreendedorismo'],
+            },
+            {
+              img: '/images/mentor4.webp',
+              name: 'Prof. Vaumara Andrade',
+              role: 'Mentora & Educadora',
+              bio: 'Mentora, Educadora, Palestrante e Líder. Dedica-se ao desenvolvimento humano, fortalecimento da identidade, crescimento emocional e formação de pessoas com propósito. A sua presença no Fellowship traz profundidade, cuidado e perspetiva única ao processo de crescimento de cada participante.',
+              tags: ['Desenvolvimento Humano', 'Identidade', 'Educação'],
+            },
+          ].map((m, i) => (
+            <div
+              key={m.name}
+              className="anim opacity-0 translate-y-8 transition-all duration-700 overflow-hidden"
+              style={{
+                borderRadius: '22px',
+                border: '1px solid rgba(201,162,39,0.2)',
+                background: 'linear-gradient(180deg,#0b1b39,#0a1730)',
+                transitionDelay: `${i * 100}ms`,
+              }}
+            >
+              {/* Photo with gradient overlay + name at bottom */}
+              <div className="relative" style={{ height: '280px' }}>
                 <Image
-                  src="/images/mentor3.webp"
-                  alt="Dr. Venceslau Andrade"
+                  src={m.img}
+                  alt={m.name}
                   fill
-                  className="object-cover object-top"
+                  className="object-cover"
+                  style={{ objectPosition: 'center 18%' }}
                   sizes="100vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#060f22]/50 to-transparent" />
+                <div
+                  className="absolute inset-0"
+                  style={{ background: 'linear-gradient(180deg,transparent 45%,rgba(10,23,48,0.95))' }}
+                />
+                <div className="absolute left-5 bottom-4 right-5">
+                  <div style={{ fontFamily: 'var(--font-cormorant)', fontSize: '24px', fontWeight: 700, color: '#fff' }}>
+                    {m.name}
+                  </div>
+                  <div style={{ fontSize: '12.5px', fontWeight: 700, letterSpacing: '0.04em', color: '#e3c25b' }}>
+                    {m.role}
+                  </div>
+                </div>
               </div>
-              {/* Tablet/Desktop: grid layout */}
+              {/* Bio + tags */}
+              <div className="p-5">
+                <p style={{ fontSize: '14px', lineHeight: '1.6', color: '#b6c3da' }}>{m.bio}</p>
+                <div className="flex flex-wrap gap-2 mt-4">
+                  {m.tags.map(tag => (
+                    <span
+                      key={tag}
+                      style={{ padding: '7px 13px', borderRadius: '100px', fontSize: '12px', fontWeight: 600, color: '#e3c25b', background: 'rgba(201,162,39,0.12)', border: '1px solid rgba(201,162,39,0.28)' }}
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop: original 2-col grid layout (sm+) */}
+        {/* Dr. Venceslau */}
+        <div className="hidden sm:block anim opacity-0 translate-y-8 transition-all duration-700 delay-100 mb-8 sm:mb-16">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+            <div className="relative pb-8 sm:pb-6">
               <div className="hidden sm:grid grid-cols-2 gap-4">
                 <div className="relative rounded-2xl overflow-hidden aspect-[3/4]">
-                  <Image
-                    src="/images/mentor3.webp"
-                    alt="Dr. Venceslau Andrade"
-                    fill
-                    className="object-cover object-center hover:scale-105 transition-transform duration-700"
-                    sizes="(max-width: 1024px) 40vw, 30vw"
-                  />
+                  <Image src="/images/mentor3.webp" alt="Dr. Venceslau Andrade" fill className="object-cover object-center hover:scale-105 transition-transform duration-700" sizes="(max-width: 1024px) 40vw, 30vw" />
                 </div>
                 <div className="space-y-3 pt-6">
                   <div className="relative rounded-2xl overflow-hidden aspect-square">
-                    <Image
-                      src="/images/mentor1.webp"
-                      alt="Dr. Venceslau Andrade"
-                      fill
-                      className="object-cover object-center hover:scale-105 transition-transform duration-700"
-                      sizes="(max-width: 1024px) 20vw, 15vw"
-                    />
+                    <Image src="/images/mentor1.webp" alt="Dr. Venceslau Andrade" fill className="object-cover object-center hover:scale-105 transition-transform duration-700" sizes="(max-width: 1024px) 20vw, 15vw" />
                   </div>
                   <div className="relative rounded-2xl overflow-hidden aspect-square">
-                    <Image
-                      src="/images/mentor2.webp"
-                      alt="Dr. Venceslau Andrade e Prof. Vaumara"
-                      fill
-                      className="object-cover object-center hover:scale-105 transition-transform duration-700"
-                      sizes="(max-width: 1024px) 20vw, 15vw"
-                    />
+                    <Image src="/images/mentor2.webp" alt="Dr. Venceslau Andrade e Prof. Vaumara" fill className="object-cover object-center hover:scale-105 transition-transform duration-700" sizes="(max-width: 1024px) 20vw, 15vw" />
                   </div>
                 </div>
               </div>
-              {/* Name badge */}
-              <div className="absolute bottom-2 sm:bottom-0 left-3 sm:left-4 glass rounded-xl px-4 sm:px-5 py-2 sm:py-3 border border-[#F7931E]/30">
-                <p className="text-[#F7931E] font-bold text-xs sm:text-sm">Dr. Venceslau Andrade</p>
+              <div className="absolute bottom-0 left-4 glass rounded-xl px-5 py-3 border border-[#F7931E]/30">
+                <p className="text-[#F7931E] font-bold text-sm">Dr. Venceslau Andrade</p>
                 <p className="text-white/50 text-xs">Mentor Internacional</p>
               </div>
             </div>
-
-            {/* Content */}
             <div className="space-y-5 sm:space-y-6">
               <div>
-                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2">
-                  Dr. Venceslau Andrade
-                </h3>
-                <p className="text-[#F7931E] font-medium text-sm sm:text-base leading-relaxed">
-                  Mentor Internacional · Líder · Empresário · Fundador da CODE V Leadership School
-                </p>
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2">Dr. Venceslau Andrade</h3>
+                <p className="text-[#F7931E] font-medium text-sm sm:text-base leading-relaxed">Mentor Internacional · Líder · Empresário · Fundador da CODE V Leadership School</p>
               </div>
               <div className="space-y-3 sm:space-y-4 text-white/70 text-sm sm:text-base leading-relaxed">
-                <p>
-                  Ao longo dos anos tem desenvolvido líderes, empreendedores e organizações em
-                  diferentes países, ajudando pessoas a alinhar propósito, liderança, identidade e
-                  resultados.
-                </p>
-                <p className="hidden sm:block">
-                  A sua abordagem única combina princípios espirituais sólidos com estratégias
-                  práticas de desenvolvimento humano, criando um ambiente de transformação genuína.
-                </p>
-                <p className="text-white font-medium">
-                  A sua missão é formar líderes que sejam uma resposta para esta geração.
-                </p>
+                <p>Ao longo dos anos tem desenvolvido líderes, empreendedores e organizações em diferentes países, ajudando pessoas a alinhar propósito, liderança, identidade e resultados.</p>
+                <p>A sua abordagem única combina princípios espirituais sólidos com estratégias práticas de desenvolvimento humano, criando um ambiente de transformação genuína.</p>
+                <p className="text-white font-medium">A sua missão é formar líderes que sejam uma resposta para esta geração.</p>
               </div>
-              {/* Tags — max 3 visible on mobile */}
               <div className="flex flex-wrap gap-2">
-                {["Liderança", "Propósito", "Empreendedorismo", "Fé", "Desenvolvimento Humano"].map((tag, i) => (
-                  <span
-                    key={tag}
-                    className={`px-2.5 sm:px-3 py-1 rounded-full bg-[#F7931E]/10 border border-[#F7931E]/20 text-[#F7931E] text-xs font-medium ${i >= 3 ? "hidden sm:inline-block" : ""}`}
-                  >
-                    {tag}
-                  </span>
+                {["Liderança", "Propósito", "Empreendedorismo", "Fé", "Desenvolvimento Humano"].map(tag => (
+                  <span key={tag} className="px-3 py-1 rounded-full bg-[#F7931E]/10 border border-[#F7931E]/20 text-[#F7931E] text-xs font-medium">{tag}</span>
                 ))}
               </div>
             </div>
@@ -141,94 +158,41 @@ export default function Mentores() {
         {/* Divider */}
         <div className="divider-gold my-8 sm:my-16" />
 
-        {/* Prof. Vaumara */}
-        <div className="anim opacity-0 translate-y-8 transition-all duration-700 delay-200">
+        {/* Prof. Vaumara — desktop only */}
+        <div className="hidden sm:block anim opacity-0 translate-y-8 transition-all duration-700 delay-200">
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
-            {/* Content — order-2 on mobile (image first) */}
             <div className="space-y-5 sm:space-y-6 order-2 lg:order-1">
               <div>
-                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2">
-                  Prof. Vaumara Andrade
-                </h3>
-                <p className="text-[#F7931E] font-medium text-sm sm:text-base leading-relaxed">
-                  Mentora · Educadora · Palestrante · Líder
-                </p>
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2">Prof. Vaumara Andrade</h3>
+                <p className="text-[#F7931E] font-medium text-sm sm:text-base leading-relaxed">Mentora · Educadora · Palestrante · Líder</p>
               </div>
               <div className="space-y-3 sm:space-y-4 text-white/70 text-sm sm:text-base leading-relaxed">
-                <p>
-                  Dedica-se ao desenvolvimento humano, fortalecimento da identidade, crescimento
-                  emocional e formação de pessoas com propósito.
-                </p>
-                <p className="hidden sm:block">
-                  Através do ensino, mentoria e liderança, tem impactado vidas e ajudado pessoas a
-                  descobrirem o seu valor, potencial e propósito em diferentes contextos e culturas.
-                </p>
-                <p className="text-white font-medium">
-                  A sua presença no Fellowship traz profundidade, cuidado e perspetiva única ao
-                  processo de crescimento de cada participante.
-                </p>
+                <p>Dedica-se ao desenvolvimento humano, fortalecimento da identidade, crescimento emocional e formação de pessoas com propósito.</p>
+                <p>Através do ensino, mentoria e liderança, tem impactado vidas e ajudado pessoas a descobrirem o seu valor, potencial e propósito em diferentes contextos e culturas.</p>
+                <p className="text-white font-medium">A sua presença no Fellowship traz profundidade, cuidado e perspetiva única ao processo de crescimento de cada participante.</p>
               </div>
-              {/* Tags — max 3 visible on mobile */}
               <div className="flex flex-wrap gap-2">
-                {["Desenvolvimento Humano", "Identidade", "Educação", "Mentoria", "Liderança"].map((tag, i) => (
-                  <span
-                    key={tag}
-                    className={`px-2.5 sm:px-3 py-1 rounded-full bg-[#F7931E]/10 border border-[#F7931E]/20 text-[#F7931E] text-xs font-medium ${i >= 3 ? "hidden sm:inline-block" : ""}`}
-                  >
-                    {tag}
-                  </span>
+                {["Desenvolvimento Humano", "Identidade", "Educação", "Mentoria", "Liderança"].map(tag => (
+                  <span key={tag} className="px-3 py-1 rounded-full bg-[#F7931E]/10 border border-[#F7931E]/20 text-[#F7931E] text-xs font-medium">{tag}</span>
                 ))}
               </div>
             </div>
-
-            {/* Images — order-1 on mobile */}
             <div className="relative pb-10 sm:pb-8 order-1 lg:order-2">
-              {/* Mobile: single featured image */}
-              <div className="block sm:hidden relative rounded-2xl overflow-hidden aspect-[3/4]">
-                <Image
-                  src="/images/mentor4.webp"
-                  alt="Prof. Vaumara Andrade"
-                  fill
-                  className="object-cover object-top"
-                  sizes="100vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#060f22]/50 to-transparent" />
-              </div>
-              {/* Tablet/Desktop: grid layout */}
               <div className="hidden sm:grid grid-cols-2 gap-4">
                 <div className="space-y-4">
                   <div className="relative rounded-2xl overflow-hidden aspect-square">
-                    <Image
-                      src="/images/mentor4.webp"
-                      alt="Prof. Vaumara Andrade"
-                      fill
-                      className="object-cover object-center hover:scale-105 transition-transform duration-700"
-                      sizes="(max-width: 1024px) 20vw, 15vw"
-                    />
+                    <Image src="/images/mentor4.webp" alt="Prof. Vaumara Andrade" fill className="object-cover object-center hover:scale-105 transition-transform duration-700" sizes="(max-width: 1024px) 20vw, 15vw" />
                   </div>
                   <div className="relative rounded-2xl overflow-hidden aspect-square">
-                    <Image
-                      src="/images/mentor5.webp"
-                      alt="Fellowship Code V"
-                      fill
-                      className="object-cover object-center hover:scale-105 transition-transform duration-700"
-                      sizes="(max-width: 1024px) 20vw, 15vw"
-                    />
+                    <Image src="/images/mentor5.webp" alt="Fellowship Code V" fill className="object-cover object-center hover:scale-105 transition-transform duration-700" sizes="(max-width: 1024px) 20vw, 15vw" />
                   </div>
                 </div>
                 <div className="relative rounded-2xl overflow-hidden aspect-[3/4] pt-8">
-                  <Image
-                    src="/images/mentor4.webp"
-                    alt="Prof. Vaumara Andrade"
-                    fill
-                    className="object-cover object-top hover:scale-105 transition-transform duration-700"
-                    sizes="(max-width: 1024px) 20vw, 15vw"
-                  />
+                  <Image src="/images/mentor4.webp" alt="Prof. Vaumara Andrade" fill className="object-cover object-top hover:scale-105 transition-transform duration-700" sizes="(max-width: 1024px) 20vw, 15vw" />
                 </div>
               </div>
-              {/* Name badge */}
-              <div className="absolute bottom-2 sm:bottom-0 right-2 sm:right-4 glass rounded-xl px-4 sm:px-5 py-2 sm:py-3 border border-[#F7931E]/30">
-                <p className="text-[#F7931E] font-bold text-xs sm:text-sm">Prof. Vaumara Andrade</p>
+              <div className="absolute bottom-0 right-4 glass rounded-xl px-5 py-3 border border-[#F7931E]/30">
+                <p className="text-[#F7931E] font-bold text-sm">Prof. Vaumara Andrade</p>
                 <p className="text-white/50 text-xs">Mentora & Educadora</p>
               </div>
             </div>

@@ -143,8 +143,46 @@ export default function Testemunhos() {
           </p>
         </div>
 
-        {/* Main testimonial — swipe enabled */}
-        <div className="anim opacity-0 translate-y-8 transition-all duration-700 delay-100 max-w-4xl mx-auto mb-6 sm:mb-12">
+        {/* Mobile: stacked cards (Designer-faithful) */}
+        <div className="sm:hidden flex flex-col gap-[13px] mb-8">
+          {[testimonials[0], testimonials[1], testimonials[4], testimonials[6]].map((t, i) => (
+            <div
+              key={i}
+              className="anim opacity-0 translate-y-8 transition-all duration-700 rounded-[18px] p-5 border"
+              style={{
+                background: 'linear-gradient(180deg,rgba(255,255,255,0.055),rgba(255,255,255,0.02))',
+                borderColor: 'rgba(255,255,255,0.09)',
+                transitionDelay: `${i * 80}ms`,
+              }}
+            >
+              <div
+                style={{
+                  fontFamily: 'var(--font-cormorant)',
+                  fontSize: '38px',
+                  lineHeight: '0.4',
+                  color: '#c9a227',
+                  height: '18px',
+                }}
+              >&ldquo;</div>
+              <p className="mt-2.5 text-[15px] leading-[1.6]" style={{ color: '#dbe3f2' }}>{t.quote}</p>
+              <div className="flex items-center gap-[11px] mt-4">
+                <div
+                  className="w-[38px] h-[38px] rounded-full flex items-center justify-center font-bold text-[15px] flex-shrink-0"
+                  style={{ color: '#060f22', background: 'linear-gradient(135deg,#e3c25b,#c9a227)' }}
+                >
+                  {t.initial}
+                </div>
+                <div>
+                  <div className="text-[14px] font-bold text-white">{t.name}</div>
+                  <div className="text-[12px]" style={{ color: '#8da0bd' }}>{t.role}</div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop: carousel (sm+) */}
+        <div className="hidden sm:block anim opacity-0 translate-y-8 transition-all duration-700 delay-100 max-w-4xl mx-auto mb-6 sm:mb-12">
           <div
             className={`glass rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-8 border border-[#F7931E]/20 transition-all duration-300 select-none ${
               isAnimating ? "opacity-0 translate-y-4" : "opacity-100 translate-y-0"

@@ -97,21 +97,36 @@ export default function Timeline() {
               className="anim opacity-0 translate-y-8 transition-all duration-700 flex"
               style={{ transitionDelay: `${i * 100}ms` }}
             >
-              {/* Icon column + connecting line below */}
+              {/* Gold gradient number node + connecting line */}
               <div className="flex flex-col items-center flex-shrink-0 w-[46px] mr-4">
-                <div className="w-[46px] h-[46px] rounded-full bg-[#F7931E]/20 border border-[#F7931E]/30 flex items-center justify-center text-[#F7931E]">
-                  {step.icon}
+                <div
+                  className="w-[46px] h-[46px] rounded-full flex items-center justify-center flex-shrink-0 z-10"
+                  style={{
+                    background: 'linear-gradient(135deg,#e3c25b,#c9a227)',
+                    boxShadow: '0 6px 18px rgba(201,162,39,0.3)',
+                    fontFamily: 'var(--font-cormorant)',
+                    fontSize: '19px',
+                    fontWeight: 700,
+                    color: '#060f22',
+                  }}
+                >
+                  {step.number}
                 </div>
                 {i < steps.length - 1 && (
-                  <div className="w-0.5 flex-1 bg-gradient-to-b from-[#F7931E]/30 to-transparent mt-2" />
+                  <div
+                    className="w-0.5 flex-1 mt-2"
+                    style={{ background: 'linear-gradient(180deg,rgba(201,162,39,0.5),rgba(201,162,39,0.08))' }}
+                  />
                 )}
               </div>
               {/* Content card */}
-              <div className={`flex-1 ${i < steps.length - 1 ? "mb-6" : ""}`}>
-                <div className="glass rounded-2xl p-5 border border-white/10 hover:border-[#F7931E]/30 transition-all duration-300">
-                  <span className="text-[#F7931E] font-bold text-xs tracking-widest block mb-2">{step.number}</span>
-                  <h3 className="text-white font-bold text-base mb-2">{step.title}</h3>
-                  <p className="text-white/60 text-sm leading-relaxed">{step.desc}</p>
+              <div className={`flex-1 ${i < steps.length - 1 ? "mb-4" : ""}`}>
+                <div
+                  className="rounded-2xl p-4 border"
+                  style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.09)' }}
+                >
+                  <h4 className="text-white font-bold text-base mb-1.5">{step.title}</h4>
+                  <p className="text-[13.5px] leading-[1.55]" style={{ color: '#a9b8d2' }}>{step.desc}</p>
                 </div>
               </div>
             </div>

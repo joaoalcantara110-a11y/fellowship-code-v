@@ -30,9 +30,37 @@ export default function Sobre() {
       <div className="hidden sm:block absolute top-1/2 right-0 w-64 md:w-96 h-64 md:h-96 bg-[#1e3a6e]/20 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        {/* Mobile-only: Comunidade Internacional card (Designer section 4.3) */}
+        <div className="sm:hidden mb-8 anim opacity-0 translate-y-8 transition-all duration-700">
+          <div className="overflow-hidden" style={{ borderRadius: '22px', border: '1px solid rgba(201,162,39,0.2)' }}>
+            <div className="relative" style={{ height: '220px' }}>
+              <Image
+                src="/images/mentor1.webp"
+                alt="Comunidade Internacional"
+                fill
+                className="object-cover"
+                style={{ objectPosition: 'center 25%' }}
+                sizes="100vw"
+              />
+            </div>
+            <div style={{ padding: '22px 20px 24px', background: 'linear-gradient(180deg,#0b1b39,#0a1730)' }}>
+              <div style={{ fontSize: '11.5px', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#e3c25b' }}>
+                Comunidade Internacional
+              </div>
+              <h3 style={{ margin: '9px 0 0', fontFamily: 'var(--font-cormorant)', fontSize: '27px', fontWeight: 600, color: '#fff', lineHeight: 1.1 }}>
+                Líderes e Empreendedores
+              </h3>
+              <p style={{ margin: '12px 0 0', fontSize: '14.5px', lineHeight: 1.6, color: '#b6c3da' }}>
+                Mais de 400 pessoas de Portugal, Angola, Brasil, Dubai e outras nações unidas pelo mesmo propósito.
+              </p>
+            </div>
+          </div>
+        </div>
+
         <div className="grid lg:grid-cols-2 gap-10 sm:gap-16 items-center">
-          {/* Left: Image — order-2 on mobile so text comes first */}
-          <div className="anim opacity-0 translate-y-8 transition-all duration-700 relative order-2 lg:order-1 mt-4 sm:mt-0">
+          {/* Left: Image — order-2 on mobile, hidden on mobile (card above replaces it) */}
+          <div className="anim opacity-0 translate-y-8 transition-all duration-700 relative order-2 lg:order-1 mt-4 sm:mt-0 hidden sm:block">
             <div className="relative rounded-2xl overflow-hidden aspect-[4/5] max-w-sm mx-auto lg:max-w-none">
               <Image
                 src="/images/mentor1.webp"
@@ -43,11 +71,11 @@ export default function Sobre() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#060f22]/60 to-transparent" />
             </div>
-            {/* Floating card — repositioned for mobile */}
-            <div className="absolute -bottom-2 sm:-bottom-6 right-0 sm:-right-4 lg:-right-6 glass rounded-2xl p-3 sm:p-5 w-[calc(100%-1.5rem)] sm:max-w-xs shadow-2xl border border-[#F7931E]/20 mx-3 sm:mx-0">
+            {/* Floating card — desktop only */}
+            <div className="absolute -bottom-6 -right-4 lg:-right-6 glass rounded-2xl p-5 max-w-xs shadow-2xl border border-[#F7931E]/20">
               <div className="flex items-center gap-3 mb-2">
-                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#F7931E]/20 flex items-center justify-center flex-shrink-0">
-                  <svg className="w-4 h-4 sm:w-5 sm:h-5 text-[#F7931E]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-10 h-10 rounded-full bg-[#F7931E]/20 flex items-center justify-center flex-shrink-0">
+                  <svg className="w-5 h-5 text-[#F7931E]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                 </div>
@@ -62,8 +90,8 @@ export default function Sobre() {
             </div>
           </div>
 
-          {/* Right: Content — order-1 on mobile */}
-          <div className="space-y-5 sm:space-y-6 order-1 lg:order-2 pb-8 sm:pb-0">
+          {/* Right: Content */}
+          <div className="space-y-5 sm:space-y-6 order-1 lg:order-2 pb-0">
             <div className="anim opacity-0 translate-y-8 transition-all duration-700 delay-100">
               <span className="inline-block px-3 sm:px-4 py-1.5 rounded-full bg-[#F7931E]/10 border border-[#F7931E]/30 text-[#F7931E] text-xs sm:text-sm font-medium tracking-wide uppercase mb-4">
                 O Fellowship
