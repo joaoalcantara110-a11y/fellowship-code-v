@@ -29,12 +29,12 @@ export default function Sobre() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#F7931E]/30 to-transparent" />
       <div className="hidden sm:block absolute top-1/2 right-0 w-64 md:w-96 h-64 md:h-96 bg-[#1e3a6e]/20 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
 
         {/* Mobile-only: Comunidade Internacional card (Designer section 4.3) */}
         <div className="sm:hidden mb-8 anim opacity-0 translate-y-8 transition-all duration-700">
           <div className="overflow-hidden" style={{ borderRadius: '22px', border: '1px solid rgba(201,162,39,0.2)' }}>
-            <div className="relative" style={{ height: '220px' }}>
+            <div className="relative" style={{ height: '165px' }}>
               <Image
                 src="/images/mentor1.webp"
                 alt="Comunidade Internacional"
@@ -114,14 +114,14 @@ export default function Sobre() {
                 <span className="text-[#F7931E] font-semibold">Prof. Vaumara Andrade</span> e uma
                 comunidade de pessoas com visão.
               </p>
-              <p className="text-white/80 text-base sm:text-lg leading-relaxed font-medium">
+              <p className="hidden sm:block text-white/80 text-base sm:text-lg leading-relaxed font-medium">
                 Aqui não procuramos apenas motivação.{" "}
                 <span className="text-white">Construímos transformação, resultados e legado.</span>
               </p>
             </div>
 
             {/* Values */}
-            <div className="anim opacity-0 translate-y-8 transition-all duration-700 delay-300 grid grid-cols-2 gap-3 sm:gap-4 pt-2 sm:pt-4">
+            <div className="anim opacity-0 translate-y-8 transition-all duration-700 delay-300 hidden sm:grid grid-cols-2 gap-3 sm:gap-4 pt-2 sm:pt-4">
               {[
                 { icon: "✦", label: "Fé em Comunidade" },
                 { icon: "✦", label: "Identidade Fortalecida" },

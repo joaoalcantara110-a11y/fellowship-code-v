@@ -48,7 +48,7 @@ export default function CTAFinal() {
       <div className="hidden sm:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] md:w-[600px] h-[400px] md:h-[600px] bg-[#F7931E]/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#F7931E]/30 to-transparent" />
 
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-10 max-w-4xl mx-auto px-5 sm:px-6 lg:px-8 text-center">
         {/* Badge */}
         <div className="anim opacity-0 translate-y-8 transition-all duration-700 inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-[#F7931E]/10 border border-[#F7931E]/30 mb-6 sm:mb-8">
           <span className="w-2 h-2 rounded-full bg-[#F7931E] animate-pulse flex-shrink-0" />

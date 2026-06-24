@@ -44,7 +44,7 @@ export default function ParaQuem() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#F7931E]/20 to-transparent" />
       <div className="hidden sm:block absolute bottom-0 left-0 w-64 md:w-96 h-64 md:h-96 bg-[#F7931E]/5 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="anim opacity-0 translate-y-8 transition-all duration-700 text-center mb-10 sm:mb-12">
           <span className="inline-block px-3 sm:px-4 py-1.5 rounded-full bg-[#F7931E]/10 border border-[#F7931E]/30 text-[#F7931E] text-xs sm:text-sm font-medium tracking-wide uppercase mb-5">
@@ -64,7 +64,7 @@ export default function ParaQuem() {
           {audience.map((item, i) => (
             <div
               key={item.title}
-              className="anim opacity-0 translate-y-8 transition-all duration-700"
+              className={`anim opacity-0 translate-y-8 transition-all duration-700 ${i >= 6 ? 'hidden sm:block' : ''}`}
               style={{ transitionDelay: `${i * 50}ms` }}
             >
               <div className="group p-4 sm:p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-[#F7931E]/40 hover:bg-[#F7931E]/5 transition-all duration-300 cursor-default flex items-start gap-[14px] sm:flex-col sm:items-start sm:gap-0">

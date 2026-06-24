@@ -39,7 +39,7 @@ export default function FrasesImpacto() {
     >
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#F7931E]/20 to-transparent" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="anim opacity-0 translate-y-8 transition-all duration-700 text-center mb-10 sm:mb-16">
           <span className="inline-block px-3 sm:px-4 py-1.5 rounded-full bg-[#F7931E]/10 border border-[#F7931E]/30 text-[#F7931E] text-xs sm:text-sm font-medium tracking-wide uppercase mb-4">
@@ -73,7 +73,7 @@ export default function FrasesImpacto() {
 
         {/* Mobile: Designer-style gold quote cards */}
         <div className="sm:hidden anim opacity-0 translate-y-8 transition-all duration-700 delay-200 flex flex-col gap-3">
-          {frases.slice(0, 5).map((frase, i) => (
+          {frases.slice(0, 4).map((frase, i) => (
             <div
               key={i}
               className="flex gap-[14px] items-start rounded-[18px] p-[22px_20px]"

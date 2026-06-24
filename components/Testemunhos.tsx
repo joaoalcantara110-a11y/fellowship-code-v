@@ -129,7 +129,7 @@ export default function Testemunhos() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#F7931E]/20 to-transparent" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_#1e3a6e/20_0%,_transparent_70%)] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="anim opacity-0 translate-y-8 transition-all duration-700 text-center mb-8 sm:mb-12">
           <span className="inline-block px-3 sm:px-4 py-1.5 rounded-full bg-[#F7931E]/10 border border-[#F7931E]/30 text-[#F7931E] text-xs sm:text-sm font-medium tracking-wide uppercase mb-4">
@@ -145,7 +145,7 @@ export default function Testemunhos() {
 
         {/* Mobile: stacked cards (Designer-faithful) */}
         <div className="sm:hidden flex flex-col gap-[13px] mb-8">
-          {[testimonials[0], testimonials[1], testimonials[4], testimonials[6]].map((t, i) => (
+          {[testimonials[0], testimonials[1], testimonials[4]].map((t, i) => (
             <div
               key={i}
               className="anim opacity-0 translate-y-8 transition-all duration-700 rounded-[18px] p-5 border"

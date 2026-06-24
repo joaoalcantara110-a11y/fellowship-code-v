@@ -74,7 +74,7 @@ export default function Timeline() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#F7931E]/20 to-transparent" />
       <div className="hidden sm:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] md:w-[600px] h-[400px] md:h-[600px] bg-[#F7931E]/3 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="anim opacity-0 translate-y-8 transition-all duration-700 text-center mb-8 sm:mb-16">
           <span className="inline-block px-3 sm:px-4 py-1.5 rounded-full bg-[#F7931E]/10 border border-[#F7931E]/30 text-[#F7931E] text-xs sm:text-sm font-medium tracking-wide uppercase mb-4">
@@ -84,7 +84,7 @@ export default function Timeline() {
             O que acontece em{" "}
             <span className="text-gradient-gold">cada encontro.</span>
           </h2>
-          <p className="text-white/60 text-base sm:text-lg max-w-xl mx-auto">
+          <p className="hidden sm:block text-white/60 text-base sm:text-lg max-w-xl mx-auto">
             Cada sessão é cuidadosamente estruturada para maximizar o crescimento e o impacto na sua vida.
           </p>
         </div>
@@ -120,13 +120,13 @@ export default function Timeline() {
                 )}
               </div>
               {/* Content card */}
-              <div className={`flex-1 ${i < steps.length - 1 ? "mb-4" : ""}`}>
+              <div className={`flex-1 ${i < steps.length - 1 ? "mb-7" : ""}`}>
                 <div
-                  className="rounded-2xl p-4 border"
+                  className="rounded-2xl p-5 border"
                   style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.09)' }}
                 >
-                  <h4 className="text-white font-bold text-base mb-1.5">{step.title}</h4>
-                  <p className="text-[13.5px] leading-[1.55]" style={{ color: '#a9b8d2' }}>{step.desc}</p>
+                  <h4 className="text-white font-bold text-[15px] mb-2">{step.title}</h4>
+                  <p className="text-[13px] leading-[1.6]" style={{ color: '#a9b8d2' }}>{step.desc}</p>
                 </div>
               </div>
             </div>

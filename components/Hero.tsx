@@ -33,7 +33,7 @@ export default function Hero() {
   return (
     <section
       ref={heroRef}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-[88vh] sm:min-h-screen flex items-center justify-center overflow-hidden"
     >
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
@@ -56,7 +56,7 @@ export default function Hero() {
       <div className="hidden sm:block absolute bottom-1/4 left-1/4 w-48 md:w-64 h-48 md:h-64 bg-[#1e3a6e]/30 rounded-full blur-3xl pointer-events-none" />
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-6 lg:px-8 pt-8 sm:pt-14 pb-12 sm:pb-16">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 pt-8 sm:pt-14 pb-12 sm:pb-16">
         <div className="max-w-3xl text-center sm:text-left">
 
           {/* Badge */}
@@ -146,14 +146,14 @@ export default function Hero() {
               >
                 {/* Mobile: card style */}
                 <div
-                  className="sm:hidden p-[15px_14px] rounded-2xl text-left"
+                  className="sm:hidden p-[13px_12px] rounded-2xl text-left"
                   style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)' }}
                 >
-                  <div style={{ fontFamily: 'var(--font-cormorant)', fontSize: '26px', fontWeight: 700, color: '#e3c25b', lineHeight: 1 }}>
+                  <div style={{ fontFamily: 'var(--font-cormorant)', fontSize: '22px', fontWeight: 700, color: '#e3c25b', lineHeight: 1 }}>
                     {stat.value}
                   </div>
-                  <div className="mt-[5px] text-[12.5px] font-semibold" style={{ color: '#dbe3f2' }}>{stat.label}</div>
-                  <div className="text-[11.5px]" style={{ color: '#8da0bd' }}>{stat.sub}</div>
+                  <div className="mt-1 text-[11.5px] font-semibold leading-tight" style={{ color: '#dbe3f2' }}>{stat.label}</div>
+                  <div className="text-[11px] leading-tight" style={{ color: '#8da0bd' }}>{stat.sub}</div>
                 </div>
                 {/* Desktop: simple text */}
                 <span className="hidden sm:block text-xl sm:text-2xl font-bold text-[#F7931E] leading-none">{stat.value}</span>
