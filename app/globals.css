@@ -132,6 +132,13 @@ h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
 }
 
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 /* Smooth swipe for carousels */
 .testimonial-swipe {
   -webkit-overflow-scrolling: touch;
