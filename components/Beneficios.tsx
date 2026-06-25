@@ -39,7 +39,7 @@ export default function Beneficios() {
     <section
       id="beneficios"
       ref={sectionRef}
-      className="relative hidden sm:block sm:py-20 md:py-32 bg-[#060f22] overflow-hidden"
+      className="relative py-16 sm:py-20 md:py-32 bg-[#060f22] overflow-hidden"
     >
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#F7931E]/20 to-transparent" />
       <div className="hidden sm:block absolute bottom-0 right-0 w-64 md:w-96 h-64 md:h-96 bg-[#1e3a6e]/20 rounded-full blur-3xl pointer-events-none" />
@@ -47,13 +47,14 @@ export default function Beneficios() {
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="anim opacity-0 translate-y-8 transition-all duration-700 text-center mb-10 sm:mb-12">
-          <span className="inline-block px-3 sm:px-4 py-1.5 rounded-full bg-[#F7931E]/10 border border-[#F7931E]/30 text-[#F7931E] text-xs sm:text-sm font-medium tracking-wide uppercase mb-5">
+          <div className="sm:hidden text-[11.5px] font-bold tracking-[0.1em] uppercase mb-3" style={{ color: '#e3c25b' }}>Benefícios</div>
+          <span className="hidden sm:inline-block px-4 py-1.5 rounded-full bg-[#F7931E]/10 border border-[#F7931E]/30 text-[#F7931E] text-sm font-medium tracking-wide uppercase mb-5">
             Benefícios
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
             O que vai <span className="text-gradient-gold">ganhar.</span>
           </h2>
-          <p className="text-white/60 text-sm sm:text-lg max-w-[280px] sm:max-w-xl mx-auto leading-relaxed">
+          <p className="text-white/60 text-sm sm:text-lg sm:max-w-xl mx-auto leading-relaxed">
             Cada sessão é um passo estratégico em direção à liderança, ao propósito e à sua melhor versão.
           </p>
         </div>
@@ -63,7 +64,7 @@ export default function Beneficios() {
           {benefits.map((benefit, i) => (
             <div
               key={benefit.title}
-              className={`anim opacity-0 translate-y-8 transition-all duration-700 ${i >= 6 ? 'hidden sm:block' : ''}`}
+              className="anim opacity-0 translate-y-8 transition-all duration-700"
               style={{ transitionDelay: `${i * 50}ms` }}
             >
               <div

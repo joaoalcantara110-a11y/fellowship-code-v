@@ -92,9 +92,10 @@ export default function Sobre() {
           </div>
 
           {/* Right: Content */}
-          <div className="space-y-5 sm:space-y-6 order-1 lg:order-2 pb-0">
+          <div className="space-y-5 sm:space-y-6 order-1 lg:order-2 pb-0 text-center sm:text-left">
             <div className="anim opacity-0 translate-y-8 transition-all duration-700 delay-100">
-              <span className="inline-block px-3 sm:px-4 py-1.5 rounded-full bg-[#F7931E]/10 border border-[#F7931E]/30 text-[#F7931E] text-xs sm:text-sm font-medium tracking-wide uppercase mb-4">
+              <div className="sm:hidden text-[11.5px] font-bold tracking-[0.1em] uppercase mb-3" style={{ color: '#e3c25b' }}>O Fellowship</div>
+              <span className="hidden sm:inline-block px-4 py-1.5 rounded-full bg-[#F7931E]/10 border border-[#F7931E]/30 text-[#F7931E] text-sm font-medium tracking-wide uppercase mb-5">
                 O Fellowship
               </span>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">
@@ -108,7 +109,7 @@ export default function Sobre() {
                 O <span className="text-white font-semibold">Fellowship Code V</span> é um espaço
                 contínuo de comunhão, crescimento espiritual e alinhamento prático.
               </p>
-              <p className="hidden sm:block text-white/70 text-base sm:text-lg leading-relaxed">
+              <p className="text-white/70 text-base sm:text-lg leading-relaxed">
                 Uma transmissão privada semanal onde líderes, empreendedores e visionários
                 comprometidos com o Reino se conectam em tempo real com{" "}
                 <span className="text-[#F7931E] font-semibold">Dr. Venceslau Andrade</span>,{" "}

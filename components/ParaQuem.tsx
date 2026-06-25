@@ -47,14 +47,15 @@ export default function ParaQuem() {
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="anim opacity-0 translate-y-8 transition-all duration-700 text-center mb-10 sm:mb-12">
-          <span className="inline-block px-3 sm:px-4 py-1.5 rounded-full bg-[#F7931E]/10 border border-[#F7931E]/30 text-[#F7931E] text-xs sm:text-sm font-medium tracking-wide uppercase mb-5">
+          <div className="sm:hidden text-[11.5px] font-bold tracking-[0.1em] uppercase mb-3" style={{ color: '#e3c25b' }}>Para Quem É</div>
+          <span className="hidden sm:inline-block px-4 py-1.5 rounded-full bg-[#F7931E]/10 border border-[#F7931E]/30 text-[#F7931E] text-sm font-medium tracking-wide uppercase mb-5">
             Para Quem É
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
             Esta comunidade é para <span className="text-gradient-gold">si.</span>
           </h2>
-          <p className="text-white/60 text-sm sm:text-lg max-w-[280px] sm:max-w-2xl mx-auto leading-relaxed">
-            <span className="sm:hidden">O ambiente certo para quem recusa a estagnação e quer crescer.</span>
+          <p className="text-white/60 text-sm sm:text-lg sm:max-w-2xl mx-auto leading-relaxed">
+            <span className="sm:hidden">O ambiente desenhado para quem recusa a estagnação. Se acredita que o seu crescimento exige a comunidade certa, este é o seu lugar.</span>
             <span className="hidden sm:inline">O Fellowship Code V é o ambiente desenhado para quem recusa a estagnação. Se acredita que o seu crescimento exige a comunidade certa, este é o seu lugar.</span>
           </p>
         </div>
@@ -64,7 +65,7 @@ export default function ParaQuem() {
           {audience.map((item, i) => (
             <div
               key={item.title}
-              className={`anim opacity-0 translate-y-8 transition-all duration-700 ${i >= 3 ? 'hidden sm:block' : ''}`}
+              className="anim opacity-0 translate-y-8 transition-all duration-700"
               style={{ transitionDelay: `${i * 50}ms` }}
             >
               {/* Mobile card — Designer style (gold chip, gradient bg) */}
