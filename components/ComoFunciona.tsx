@@ -107,9 +107,9 @@ export default function ComoFunciona() {
               className="anim opacity-0 translate-y-8 transition-all duration-700"
               style={{ transitionDelay: `${(i + 2) * 60}ms` }}
             >
-              <div className="group p-4 sm:p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#F7931E]/40 hover:bg-[#F7931E]/5 transition-all duration-300 flex items-start gap-3 sm:flex-col sm:items-start sm:gap-0">
+              <div className="group p-4 sm:p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#F7931E]/40 hover:bg-[#F7931E]/5 transition-all duration-300 flex items-center gap-3 sm:flex-col sm:items-start sm:gap-0">
                 {/* Mobile: 44×44 chip; sm+: plain emoji above */}
-                <div className="flex-shrink-0 w-11 h-11 rounded-[11px] bg-[#F7931E]/10 border border-[#F7931E]/20 flex items-center justify-center text-lg leading-none sm:w-auto sm:h-auto sm:rounded-none sm:bg-transparent sm:border-0 sm:text-3xl sm:mb-4">
+                <div className="flex-shrink-0 w-11 h-11 rounded-[11px] bg-[#F7931E]/10 border border-[#F7931E]/20 flex items-center justify-center text-lg leading-[0] sm:w-auto sm:h-auto sm:rounded-none sm:bg-transparent sm:border-0 sm:text-3xl sm:mb-4">
                   {feature.icon}
                 </div>
                 <div className="flex-1 min-w-0">

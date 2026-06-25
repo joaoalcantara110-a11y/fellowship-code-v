@@ -62,7 +62,7 @@ export default function Mentores() {
               role: 'Mentora & Educadora',
               bio: 'Educadora e Mentora dedicada ao desenvolvimento humano, fortalecimento da identidade e formação de pessoas com propósito. A sua presença no Fellowship traz profundidade e perspetiva única a cada participante.',
               tags: ['Desenvolvimento Humano', 'Identidade', 'Educação'],
-              objPos: 'center 15%',
+              objPos: 'center 22%',
             },
           ].map((m, i) => (
             <div
@@ -87,7 +87,7 @@ export default function Mentores() {
                 />
                 <div
                   className="absolute inset-0"
-                  style={{ background: 'linear-gradient(180deg,transparent 45%,rgba(10,23,48,0.95))' }}
+                  style={{ background: `linear-gradient(180deg,transparent ${i === 1 ? '58%' : '45%'},rgba(10,23,48,0.95))` }}
                 />
                 <div className="absolute left-5 bottom-4 right-5">
                   <div style={{ fontFamily: 'var(--font-cormorant)', fontSize: '24px', fontWeight: 700, color: '#fff' }}>
