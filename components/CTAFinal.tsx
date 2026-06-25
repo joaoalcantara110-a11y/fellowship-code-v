@@ -6,9 +6,34 @@ import Image from "next/image";
 const WHATSAPP_LINK = "https://chat.whatsapp.com/GMEOqEQunosH0Cr5xnjiRS";
 
 const trust = [
-  { icon: "🔒", text: "Grupo Oficial Verificado" },
-  { icon: "✓",  text: "Transmissão Privada" },
-  { icon: "🌍", text: "Comunidade Internacional" },
+  {
+    icon: "🔒",
+    svgIcon: (
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      </svg>
+    ),
+    text: "Grupo Oficial Verificado",
+  },
+  {
+    icon: "✓",
+    svgIcon: (
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+      </svg>
+    ),
+    text: "Transmissão Privada",
+  },
+  {
+    icon: "🌍",
+    svgIcon: (
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
+        <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+      </svg>
+    ),
+    text: "Comunidade Internacional",
+  },
 ];
 
 export default function CTAFinal() {
@@ -118,14 +143,14 @@ export default function CTAFinal() {
               RESERVAR O MEU LUGAR
             </a>
 
-            <div style={{ display: "flex", flexDirection: "column", gap: "9px", marginTop: "20px" }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: "10px", marginTop: "22px" }}>
               {trust.map((item) => (
                 <div
                   key={item.text}
-                  className="flex items-center justify-center gap-2"
+                  className="flex items-center justify-center gap-[7px]"
                   style={{ fontSize: "13px", fontWeight: 600, color: "#cdd8ec" }}
                 >
-                  <span style={{ color: "#e3c25b" }}>{item.icon}</span>
+                  <span className="flex-shrink-0 text-[#e3c25b]">{item.svgIcon}</span>
                   {item.text}
                 </div>
               ))}

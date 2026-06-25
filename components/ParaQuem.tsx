@@ -3,16 +3,107 @@
 import { useEffect, useRef } from "react";
 
 const audience = [
-  { icon: "👑", title: "Líderes", desc: "Que procuram elevar a sua influência e liderar com princípios inegociáveis." },
-  { icon: "🚀", title: "Empreendedores", desc: "Que desejam construir negócios sólidos, rentáveis e alinhados com o Reino." },
-  { icon: "⛪", title: "Pastores", desc: "Que precisam de um ambiente seguro para recarregar, aprender e crescer." },
-  { icon: "💼", title: "Profissionais", desc: "Que recusam a mediocridade e procuram a excelência no mercado de trabalho." },
-  { icon: "🌱", title: "Jovens em Crescimento", desc: "Que desejam construir uma base sólida de identidade e propósito." },
-  { icon: "🎯", title: "Clareza de Propósito", desc: "Quem procura direção clara para a sua vida, família e missão." },
-  { icon: "🏆", title: "Desenvolvimento", desc: "Quem deseja desenvolver capacidades de liderança transformacional." },
-  { icon: "🙏", title: "Crescimento Espiritual", desc: "Quem deseja aprofundar a sua fé e relação com Deus." },
-  { icon: "🌍", title: "Pessoas de Visão", desc: "Quem acredita que foi chamado para impactar o mundo ao seu redor." },
-  { icon: "⭐", title: "Chamados para Mais", desc: "Quem sente que há mais para a sua vida e deseja descobrir o quê." },
+  {
+    icon: "👑",
+    svgIcon: (
+      <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+      </svg>
+    ),
+    title: "Líderes",
+    desc: "Que procuram elevar a sua influência e liderar com princípios inegociáveis.",
+  },
+  {
+    icon: "🚀",
+    svgIcon: (
+      <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>
+      </svg>
+    ),
+    title: "Empreendedores",
+    desc: "Que desejam construir negócios sólidos, rentáveis e alinhados com o Reino.",
+  },
+  {
+    icon: "⛪",
+    svgIcon: (
+      <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+      </svg>
+    ),
+    title: "Pastores",
+    desc: "Que precisam de um ambiente seguro para recarregar, aprender e crescer.",
+  },
+  {
+    icon: "💼",
+    svgIcon: (
+      <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/>
+      </svg>
+    ),
+    title: "Profissionais",
+    desc: "Que recusam a mediocridade e procuram a excelência no mercado de trabalho.",
+  },
+  {
+    icon: "🌱",
+    svgIcon: (
+      <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10"/><polyline points="16 12 12 8 8 12"/><line x1="12" y1="16" x2="12" y2="8"/>
+      </svg>
+    ),
+    title: "Jovens em Crescimento",
+    desc: "Que desejam construir uma base sólida de identidade e propósito.",
+  },
+  {
+    icon: "🎯",
+    svgIcon: (
+      <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>
+      </svg>
+    ),
+    title: "Clareza de Propósito",
+    desc: "Quem procura direção clara para a sua vida, família e missão.",
+  },
+  {
+    icon: "🏆",
+    svgIcon: (
+      <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/>
+      </svg>
+    ),
+    title: "Desenvolvimento",
+    desc: "Quem deseja desenvolver capacidades de liderança transformacional.",
+  },
+  {
+    icon: "🙏",
+    svgIcon: (
+      <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+      </svg>
+    ),
+    title: "Crescimento Espiritual",
+    desc: "Quem deseja aprofundar a sua fé e relação com Deus.",
+  },
+  {
+    icon: "🌍",
+    svgIcon: (
+      <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
+        <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+      </svg>
+    ),
+    title: "Pessoas de Visão",
+    desc: "Quem acredita que foi chamado para impactar o mundo ao seu redor.",
+  },
+  {
+    icon: "⭐",
+    svgIcon: (
+      <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+      </svg>
+    ),
+    title: "Chamados para Mais",
+    desc: "Quem sente que há mais para a sua vida e deseja descobrir o quê.",
+  },
 ];
 
 export default function ParaQuem() {
@@ -60,24 +151,24 @@ export default function ParaQuem() {
           </p>
         </div>
 
-        {/* Cards Grid — mobile: 3 items, sm+: full grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-5 gap-3 sm:gap-4">
+        {/* Cards Grid — 1 col mobile, 2 sm, 3 md, 5 xl */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-5 gap-[14px] sm:gap-4">
           {audience.map((item, i) => (
             <div
               key={item.title}
               className="anim opacity-0 translate-y-8 transition-all duration-700"
               style={{ transitionDelay: `${i * 50}ms` }}
             >
-              {/* Mobile card — Designer style (gold chip, gradient bg) */}
+              {/* Mobile card */}
               <div
                 className="sm:hidden flex items-start gap-[14px]"
                 style={{ padding: '17px 16px', borderRadius: '18px', background: 'linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02))', border: '1px solid rgba(255,255,255,0.08)' }}
               >
                 <div
-                  className="flex items-center justify-center text-[22px] leading-none"
+                  className="flex items-center justify-center text-[#c9a227]"
                   style={{ flexShrink: 0, width: '46px', height: '46px', borderRadius: '13px', background: 'rgba(201,162,39,0.14)', border: '1px solid rgba(201,162,39,0.28)' }}
                 >
-                  {item.icon}
+                  {item.svgIcon}
                 </div>
                 <div className="flex-1 min-w-0">
                   <h4 className="text-white font-bold leading-snug" style={{ margin: '2px 0 0', fontSize: '16px' }}>{item.title}</h4>
@@ -94,8 +185,8 @@ export default function ParaQuem() {
           ))}
         </div>
 
-        {/* Bottom quote — Mobile: Cormorant gold card | Desktop: glass card */}
-        <div className="anim opacity-0 translate-y-8 transition-all duration-700 delay-500 mt-8 sm:mt-12">
+        {/* Bottom quote */}
+        <div className="anim opacity-0 translate-y-8 transition-all duration-700 delay-500 mt-10 sm:mt-12">
           {/* Mobile */}
           <div
             className="sm:hidden text-center"

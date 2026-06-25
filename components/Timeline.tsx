@@ -99,7 +99,7 @@ export default function Timeline() {
               style={{ transitionDelay: `${i * 100}ms` }}
             >
               {/* Gold gradient number node + connecting line */}
-              <div className="flex flex-col items-center flex-shrink-0 w-[46px] mr-4">
+              <div className="flex flex-col items-center flex-shrink-0 w-[46px] mr-5">
                 <div
                   className="w-[46px] h-[46px] rounded-full flex items-center justify-center flex-shrink-0 z-10"
                   style={{
@@ -121,7 +121,7 @@ export default function Timeline() {
                 )}
               </div>
               {/* Content card */}
-              <div className={`flex-1 ${i < steps.length - 1 ? "mb-4" : ""}`}>
+              <div className={`flex-1 ${i < steps.length - 1 ? "mb-6" : ""}`}>
                 <div
                   className="rounded-2xl border"
                   style={{ padding: '16px 17px', background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(255,255,255,0.09)' }}

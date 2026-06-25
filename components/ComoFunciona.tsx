@@ -3,13 +3,79 @@
 import { useEffect, useRef } from "react";
 
 const features = [
-  { icon: "📅", title: "Todas as Quintas-Feiras", desc: "Encontros semanais regulares para crescimento contínuo e consistente." },
-  { icon: "💻", title: "Transmissão Privada", desc: "Acesso global online, sem barreiras geográficas (Zoom & YouTube)." },
-  { icon: "⏱️", title: "90 Minutos", desc: "Sessões intensas e focadas, respeitando o seu tempo e agenda." },
-  { icon: "🌍", title: "Comunidade Internacional", desc: "Conecte-se com centenas de líderes de Portugal, Angola, Brasil e Dubai." },
-  { icon: "🤝", title: "Interação Direta", desc: "Acesso direto aos mentores em cada sessão ao vivo." },
-  { icon: "📖", title: "Ensino com Princípios", desc: "Conteúdo sólido fundamentado em princípios bíblicos e de liderança." },
-  { icon: "🚀", title: "Crescimento Contínuo", desc: "Um processo progressivo de desenvolvimento pessoal e espiritual." },
+  {
+    icon: "📅",
+    svgIcon: (
+      <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+      </svg>
+    ),
+    title: "Todas as Quintas-Feiras",
+    desc: "Encontros semanais regulares para crescimento contínuo e consistente.",
+  },
+  {
+    icon: "💻",
+    svgIcon: (
+      <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+      </svg>
+    ),
+    title: "Transmissão Privada",
+    desc: "Acesso global online, sem barreiras geográficas (Zoom & YouTube).",
+  },
+  {
+    icon: "⏱️",
+    svgIcon: (
+      <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+      </svg>
+    ),
+    title: "90 Minutos",
+    desc: "Sessões intensas e focadas, respeitando o seu tempo e agenda.",
+  },
+  {
+    icon: "🌍",
+    svgIcon: (
+      <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
+        <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+      </svg>
+    ),
+    title: "Comunidade Internacional",
+    desc: "Conecte-se com centenas de líderes de Portugal, Angola, Brasil e Dubai.",
+  },
+  {
+    icon: "🤝",
+    svgIcon: (
+      <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/>
+        <path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/>
+      </svg>
+    ),
+    title: "Interação Direta",
+    desc: "Acesso direto aos mentores em cada sessão ao vivo.",
+  },
+  {
+    icon: "📖",
+    svgIcon: (
+      <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M4 19.5A2.5 2.5 0 016.5 17H20"/>
+        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/>
+      </svg>
+    ),
+    title: "Ensino com Princípios",
+    desc: "Conteúdo sólido fundamentado em princípios bíblicos e de liderança.",
+  },
+  {
+    icon: "🚀",
+    svgIcon: (
+      <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>
+      </svg>
+    ),
+    title: "Crescimento Contínuo",
+    desc: "Um processo progressivo de desenvolvimento pessoal e espiritual.",
+  },
 ];
 
 export default function ComoFunciona() {
@@ -43,7 +109,7 @@ export default function ComoFunciona() {
 
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="anim opacity-0 translate-y-8 transition-all duration-700 text-center mb-8 sm:mb-12">
+        <div className="anim opacity-0 translate-y-8 transition-all duration-700 text-center mb-10 sm:mb-12">
           <div className="sm:hidden text-[11.5px] font-bold tracking-[0.1em] uppercase mb-3" style={{ color: '#e3c25b' }}>Como Funciona</div>
           <span className="hidden sm:inline-block px-4 py-1.5 rounded-full bg-[#F7931E]/10 border border-[#F7931E]/30 text-[#F7931E] text-sm font-medium tracking-wide uppercase mb-5">
             Como Funciona
@@ -57,7 +123,7 @@ export default function ComoFunciona() {
         </div>
 
         {/* Mobile stats: 3 células douradas (referência Designer) */}
-        <div className="sm:hidden anim opacity-0 translate-y-8 transition-all duration-700 delay-100 grid grid-cols-3 gap-[9px] mt-6 mb-[14px]">
+        <div className="sm:hidden anim opacity-0 translate-y-8 transition-all duration-700 delay-100 grid grid-cols-3 gap-[9px] mt-6 mb-5">
           {[
             { big: '18h', label: 'Portugal', sub: '5ª feiras' },
             { big: '90',  label: 'Minutos',  sub: 'Por sessão' },
@@ -100,7 +166,7 @@ export default function ComoFunciona() {
         </div>
 
         {/* Features grid — 1 col on mobile, 2 on sm, 4 on lg */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
           {features.map((feature, i) => (
             <div
               key={feature.title}
@@ -108,8 +174,12 @@ export default function ComoFunciona() {
               style={{ transitionDelay: `${(i + 2) * 60}ms` }}
             >
               <div className="group p-4 sm:p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#F7931E]/40 hover:bg-[#F7931E]/5 transition-all duration-300 flex items-center gap-3 sm:flex-col sm:items-start sm:gap-0">
-                {/* Mobile: 44×44 chip; sm+: plain emoji above */}
-                <div className="flex-shrink-0 w-11 h-11 rounded-[11px] bg-[#F7931E]/10 border border-[#F7931E]/20 flex items-center justify-center text-lg leading-[0] sm:w-auto sm:h-auto sm:rounded-none sm:bg-transparent sm:border-0 sm:text-3xl sm:mb-4">
+                {/* Mobile: SVG icon chip */}
+                <div className="flex-shrink-0 sm:hidden w-11 h-11 rounded-[11px] bg-[#F7931E]/10 border border-[#F7931E]/20 flex items-center justify-center text-[#F7931E]">
+                  {feature.svgIcon}
+                </div>
+                {/* Desktop: emoji icon */}
+                <div className="hidden sm:block text-3xl sm:mb-4">
                   {feature.icon}
                 </div>
                 <div className="flex-1 min-w-0">
