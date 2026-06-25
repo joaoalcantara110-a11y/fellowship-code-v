@@ -146,14 +146,14 @@ export default function Hero() {
               >
                 {/* Mobile: card style */}
                 <div
-                  className="sm:hidden p-[13px_12px] rounded-2xl text-left"
-                  style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)' }}
+                  className="sm:hidden rounded-2xl flex flex-col justify-center"
+                  style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', padding: '13px 12px', minHeight: '82px' }}
                 >
-                  <div style={{ fontFamily: 'var(--font-cormorant)', fontSize: '22px', fontWeight: 700, color: '#e3c25b', lineHeight: 1 }}>
+                  <div style={{ fontFamily: 'var(--font-cormorant)', fontSize: '20px', fontWeight: 700, color: '#e3c25b', lineHeight: 1 }}>
                     {stat.value}
                   </div>
-                  <div className="mt-1 text-[11.5px] font-semibold leading-tight" style={{ color: '#dbe3f2' }}>{stat.label}</div>
-                  <div className="text-[11px] leading-tight" style={{ color: '#8da0bd' }}>{stat.sub}</div>
+                  <div style={{ marginTop: '5px', fontSize: '11px', fontWeight: 600, lineHeight: 1.25, color: '#dbe3f2' }}>{stat.label}</div>
+                  <div style={{ marginTop: '3px', fontSize: '10.5px', lineHeight: 1.25, color: '#8da0bd' }}>{stat.sub}</div>
                 </div>
                 {/* Desktop: simple text */}
                 <span className="hidden sm:block text-xl sm:text-2xl font-bold text-[#F7931E] leading-none">{stat.value}</span>
