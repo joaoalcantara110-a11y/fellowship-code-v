@@ -62,7 +62,7 @@ export default function Mentores() {
               role: 'Mentora & Educadora',
               bio: 'Educadora e Mentora dedicada ao desenvolvimento humano, fortalecimento da identidade e formação de pessoas com propósito. A sua presença no Fellowship traz profundidade e perspetiva única a cada participante.',
               tags: ['Desenvolvimento Humano', 'Identidade', 'Educação'],
-              objPos: 'center top',
+              objPos: 'center 15%',
             },
           ].map((m, i) => (
             <div
