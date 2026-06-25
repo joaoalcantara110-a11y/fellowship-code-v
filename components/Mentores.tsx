@@ -54,13 +54,15 @@ export default function Mentores() {
               role: 'Mentor Internacional',
               bio: 'Fundador da CODE V Leadership School. Combina princípios espirituais sólidos com estratégias práticas de desenvolvimento humano. A sua missão é formar líderes que sejam uma resposta para esta geração.',
               tags: ['Liderança', 'Propósito', 'Empreendedorismo'],
+              objPos: 'center 18%',
             },
             {
-              img: '/images/mentor4.webp',
+              img: '/images/mentor-vaumara-mobile.jpg',
               name: 'Prof. Vaumara Andrade',
               role: 'Mentora & Educadora',
               bio: 'Educadora e Mentora dedicada ao desenvolvimento humano, fortalecimento da identidade e formação de pessoas com propósito. A sua presença no Fellowship traz profundidade e perspetiva única a cada participante.',
               tags: ['Desenvolvimento Humano', 'Identidade', 'Educação'],
+              objPos: 'center top',
             },
           ].map((m, i) => (
             <div
@@ -80,7 +82,7 @@ export default function Mentores() {
                   alt={m.name}
                   fill
                   className="object-cover"
-                  style={{ objectPosition: 'center 18%' }}
+                  style={{ objectPosition: m.objPos }}
                   sizes="100vw"
                 />
                 <div

@@ -71,7 +71,7 @@ export default function Hero() {
           </div>
 
           {/* Logo — visible on mobile (Designer shows it centered) */}
-          <div className="animate-on-enter opacity-0 translate-y-8 transition-all duration-700 delay-150 mb-5 sm:mb-6 flex justify-center sm:justify-start">
+          <div className="animate-on-enter opacity-0 translate-y-8 transition-all duration-700 delay-150 mb-5 sm:mb-6 hidden sm:flex sm:justify-start">
             <Image
               src="/images/logo1.png"
               alt="Fellowship Global"
